@@ -43,3 +43,8 @@ C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.A
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\SistemaManutencao.Infra.IoC.pdb
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\SistemaManutencao.Domain.pdb
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\SistemaManutencao.Infra.Data.pdb
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\Humanizer.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\System.CodeDom.dll

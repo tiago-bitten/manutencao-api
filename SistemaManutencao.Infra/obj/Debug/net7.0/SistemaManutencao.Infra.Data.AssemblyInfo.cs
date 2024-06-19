@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaManutencao.Infra.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31b9d1dcb4d8b3f4e16004b801f68f2659ad0e10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cc6e2e41732337b69423fd71f18241809909fc4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaManutencao.Infra.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaManutencao.Infra.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

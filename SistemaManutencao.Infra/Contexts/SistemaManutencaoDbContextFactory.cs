@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 
 namespace SistemaManutencao.Infra.Data.Contexts
 {
@@ -9,14 +8,26 @@ namespace SistemaManutencao.Infra.Data.Contexts
     {
         public SistemaManutencaoDbContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<SistemaManutencaoDbContext>();
+            var basePath = Path.Combine(Directory.GetCurrentDirectory(), "../SistemaManutencao.API");
+
+            if (!Directory.Exists(basePath))
+            {
+                throw new DirectoryNotFoundException($"Base path '{basePath}' not found.");
+            }
 
             var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
+                .SetBasePath(basePath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
             var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new ArgumentException("Connection string 'DefaultConnection' not found.");
+            }
+
+            var optionsBuilder = new DbContextOptionsBuilder<SistemaManutencaoDbContext>();
             optionsBuilder.UseNpgsql(connectionString);
 
             return new SistemaManutencaoDbContext(optionsBuilder.Options);
