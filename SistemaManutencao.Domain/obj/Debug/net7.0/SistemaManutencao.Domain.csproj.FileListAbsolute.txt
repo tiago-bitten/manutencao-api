@@ -10,3 +10,14 @@ C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.D
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Domain\obj\Debug\net7.0\refint\SistemaManutencao.Domain.dll
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.pdb
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Domain\obj\Debug\net7.0\ref\SistemaManutencao.Domain.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\bin\Debug\net7.0\SistemaManutencao.Domain.deps.json
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\bin\Debug\net7.0\SistemaManutencao.Domain.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\bin\Debug\net7.0\SistemaManutencao.Domain.pdb
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.AssemblyInfoInputs.cache
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.AssemblyInfo.cs
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.csproj.CoreCompileInputs.cache
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\refint\SistemaManutencao.Domain.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.pdb
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\ref\SistemaManutencao.Domain.dll

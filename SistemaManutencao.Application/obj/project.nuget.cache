@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ldRHpBDpW4vX1hEnRc6gS7mnDJtK/UFbHY9IikqxMR+CJmy23ADbHQAG/qhsxBkuCu931mMa4ukxbCn1soNyow==",
+  "dgSpecHash": "vDhcexEDWzqTzj8nKN60Tq/V/enmvI+fyRdv4hGXKjGM/GjVktilrV0ubf0JVomxqzQxQejsbw/D+xa4Bm+uuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj",
+  "projectFilePath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

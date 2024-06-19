@@ -10,3 +10,14 @@ C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.A
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\refint\SistemaManutencao.Application.dll
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.pdb
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\ref\SistemaManutencao.Application.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Application.deps.json
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Application.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Application.pdb
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.AssemblyInfoInputs.cache
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.AssemblyInfo.cs
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.csproj.CoreCompileInputs.cache
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\refint\SistemaManutencao.Application.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.pdb
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\ref\SistemaManutencao.Application.dll
