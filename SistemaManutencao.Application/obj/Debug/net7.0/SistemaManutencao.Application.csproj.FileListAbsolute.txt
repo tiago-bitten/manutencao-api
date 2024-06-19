@@ -1,0 +1,12 @@
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Application.deps.json
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Application.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Application.pdb
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.AssemblyInfoInputs.cache
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.AssemblyInfo.cs
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.csproj.CoreCompileInputs.cache
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.sourcelink.json
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\refint\SistemaManutencao.Application.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.pdb
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\ref\SistemaManutencao.Application.dll
