@@ -1,20 +1,20 @@
 ﻿using AutoMapper;
-using SistemaManutencao.Application.DTOs.Entities.Categoria;
+using SistemaManutencao.Application.DTOs.Entities.Modelo;
 using SistemaManutencao.Domain.Entities;
 
 namespace SistemaManutencao.Application.DTOs.Mappings
 {
-    public class CategoriaProfile : Profile
+    public class ModeloProfile : Profile
     {
-        public CategoriaProfile()
+        public ModeloProfile()
         {
-            CreateMap<CreateCategoriaDTO, Categoria>()
+            CreateMap<CreateModeloDTO, Modelo>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.CadastroGeralItems, opt => opt.Ignore());
             
-            CreateMap<Categoria, GetCategoriaDTO>();
+            CreateMap<Modelo, GetModeloDTO>();
 
-            CreateMap<UpdateCategoriaDTO, Categoria>()
+            CreateMap<UpdateModeloDTO, Modelo>()
                 .ForMember(dest => dest.CadastroGeralItems, opt => opt.Ignore());
         }
     }
