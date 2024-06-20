@@ -2,6 +2,6 @@
 {
     public class Categoria : EntidadeCommon
     {
-        public IEnumerable<CadastroGeralItem> CadastroGeralItems { get; set; }
+        public IEnumerable<CadastroGeralItem?> CadastroGeralItems { get; set; }
     }
 }

@@ -16,10 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\SistemaManutencao.Application\SistemaManutencao.Application.csproj" />
     <ProjectReference Include="..\SistemaManutencao.Infra.IoC\SistemaManutencao.Infra.IoC.csproj" />
   </ItemGroup>
 

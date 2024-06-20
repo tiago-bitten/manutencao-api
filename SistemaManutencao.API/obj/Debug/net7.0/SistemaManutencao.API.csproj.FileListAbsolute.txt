@@ -97,3 +97,7 @@ C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\ob
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\obj\Debug\net7.0\SistemaManutencao.API.pdb
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\obj\Debug\net7.0\SistemaManutencao.API.genruntimeconfig.cache
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\obj\Debug\net7.0\ref\SistemaManutencao.API.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\SistemaManutencao.Application.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\SistemaManutencao.Application.pdb
