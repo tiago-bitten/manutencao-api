@@ -4,22 +4,23 @@ using SistemaManutencao.Domain.Interfaces.Repositories;
 
 namespace SistemaManutencao.Application.UseCases.Categoria
 {
-    public class CreateCategoria
+    public class GetCategoriaById
     {
         private readonly ICategoriaRepository _categoriaRepository;
         private readonly IMapper _mapper;
 
-        public CreateCategoria(ICategoriaRepository categoriaRepository, IMapper mapper)
+        public GetCategoriaById(ICategoriaRepository categoriaRepository, IMapper mapper)
         {
             _categoriaRepository = categoriaRepository;
             _mapper = mapper;
         }
 
-        public async Task<GetCategoriaDTO> ExecuteAsync(CreateCategoriaDTO dto)
+        public async Task<GetCategoriaDTO> ExecuteAsync(Guid id)
         {
-            var categoria = _mapper.Map<Domain.Entities.Categoria>(dto);
+            var categoria = await _categoriaRepository.GetByIdAsync(id);
 
-            await _categoriaRepository.AddAsync(categoria);
+            if (categoria == null)
+                throw new ArgumentException("Categoria não encontrada");
 
             return _mapper.Map<GetCategoriaDTO>(categoria);
         }

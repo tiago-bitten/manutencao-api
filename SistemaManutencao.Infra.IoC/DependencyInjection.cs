@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SistemaManutencao.Application.DTOs.Mappings;
+using SistemaManutencao.Application.UseCases.Categoria;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Infra.Data.Contexts;
 using SistemaManutencao.Infra.Data.Repositories;
@@ -34,6 +35,7 @@ namespace SistemaManutencao.Infra.IoC
         public static IServiceCollection AddUseCases(this IServiceCollection services)
         {
             services.AddScoped<CreateCategoria>();
+            services.AddScoped<GetCategoriaById>();
 
             return services;
         }

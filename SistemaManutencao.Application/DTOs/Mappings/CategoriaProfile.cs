@@ -11,8 +11,10 @@ namespace SistemaManutencao.Application.DTOs.Mappings
             CreateMap<CreateCategoriaDTO, Categoria>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.CadastroGeralItems, opt => opt.Ignore());
-
             CreateMap<Categoria, GetCategoriaDTO>();
+
+            CreateMap<UpdateCategoriaDTO, Categoria>()
+                .ForMember(dest => dest.CadastroGeralItems, opt => opt.Ignore());
         }
     }
 }
