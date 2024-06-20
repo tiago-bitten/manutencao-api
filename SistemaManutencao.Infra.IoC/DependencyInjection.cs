@@ -3,11 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SistemaManutencao.Application.DTOs.Mappings;
+using SistemaManutencao.Application.Services;
 using SistemaManutencao.Application.UseCases.Categoria;
+using SistemaManutencao.Application.UseCases.Modelo;
 using SistemaManutencao.Domain.Interfaces.Repositories;
+using SistemaManutencao.Domain.Interfaces.Services;
 using SistemaManutencao.Infra.Data.Contexts;
 using SistemaManutencao.Infra.Data.Repositories;
-using UseCases;
 
 namespace SistemaManutencao.Infra.IoC
 {
@@ -19,6 +21,7 @@ namespace SistemaManutencao.Infra.IoC
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddAutoMapper(typeof(CategoriaProfile));
+            services.AddAutoMapper(typeof(ModeloProfile));
 
             return services;
         }
@@ -28,6 +31,14 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IModeloRepository, ModeloRepository>();
             services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<ICadastroGeralItemRepository, CadastroItemGeralRepository>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddServices(this IServiceCollection services)
+        {
+            services.AddScoped<IModeloService, ModeloService>();
 
             return services;
         }
@@ -36,6 +47,13 @@ namespace SistemaManutencao.Infra.IoC
         {
             services.AddScoped<CreateCategoria>();
             services.AddScoped<GetCategoriaById>();
+            services.AddScoped<GetAllCategorias>();
+            services.AddScoped<UpdateCategoria>();
+
+            services.AddScoped<CreateModelo>();
+            services.AddScoped<GetModeloById>();
+            services.AddScoped<GetAllModelos>();
+            services.AddScoped<UpdateModelo>();
 
             return services;
         }

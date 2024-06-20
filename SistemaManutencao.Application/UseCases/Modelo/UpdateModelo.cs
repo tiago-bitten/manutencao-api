@@ -15,14 +15,14 @@ namespace SistemaManutencao.Application.UseCases.Modelo
             _mapper = mapper;
         }
 
-        public async Task<GetModeloDTO> ExecuteAsync(Guid id, UpdateModelo dto)
+        public async Task<GetModeloDTO> ExecuteAsync(Guid id, UpdateModeloDTO dto)
         {
             var modelo = await _modeloRepository.GetByIdAsync(id);
 
             if (modelo == null)
                 throw new ArgumentException("Modelo não encontrado");
 
-            modelo = _mapper.Map<Domain.Entities.Modelo>(modelo);
+            modelo = _mapper.Map<Domain.Entities.Modelo>(dto);
 
             _modeloRepository.Update(modelo);
 
