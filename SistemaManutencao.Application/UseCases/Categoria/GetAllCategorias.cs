@@ -19,8 +19,6 @@ namespace SistemaManutencao.Application.UseCases.Categoria
         {
             var categorias = await _categoriaRepository.GetAllAsync();
 
-            throw new KeyNotFoundException("Recurso não encontrado11111");
-
             return _mapper.Map<IEnumerable<GetCategoriaDTO>>(categorias);
         }
     }

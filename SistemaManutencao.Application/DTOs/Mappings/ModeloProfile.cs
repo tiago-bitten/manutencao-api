@@ -10,12 +10,12 @@ namespace SistemaManutencao.Application.DTOs.Mappings
         {
             CreateMap<CreateModeloDTO, Modelo>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
-                .ForMember(dest => dest.CadastroGeralItems, opt => opt.Ignore());
+                .ForMember(dest => dest.Equipamentos, opt => opt.Ignore());
             
             CreateMap<Modelo, GetModeloDTO>();
 
             CreateMap<UpdateModeloDTO, Modelo>()
-                .ForMember(dest => dest.CadastroGeralItems, opt => opt.Ignore());
+                .ForMember(dest => dest.Equipamentos, opt => opt.Ignore());
         }
     }
 }

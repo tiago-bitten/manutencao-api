@@ -2,6 +2,6 @@
 {
     public sealed class Localizacao : EntidadeCommon
     {
-        public IEnumerable<CadastroGeralItem> CadastroGeralItems { get; set; }
+        public IEnumerable<Equipamento?> Equipamentos { get; set; }
     }
 }

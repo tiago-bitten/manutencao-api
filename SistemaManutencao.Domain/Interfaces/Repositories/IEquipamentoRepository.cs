@@ -2,7 +2,7 @@
 
 namespace SistemaManutencao.Domain.Interfaces.Repositories
 {
-    public interface ICadastroGeralItemRepository : IBaseRepository<CadastroGeralItem>
+    public interface IEquipamentoRepository : IBaseRepository<Equipamento>
     {
     }
 }

@@ -22,64 +22,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("SistemaManutencao.Domain.Entities.CadastroGeralItem", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid")
-                        .HasColumnName("id");
-
-                    b.Property<Guid>("CategoriaId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("categoria_id");
-
-                    b.Property<DateTime>("DataAquisicao")
-                        .HasColumnType("date")
-                        .HasColumnName("data_aquisicao");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("descricao");
-
-                    b.Property<Guid>("LocalizacaoId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("localizacao_id");
-
-                    b.Property<Guid>("ModeloId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("modelo_id");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("varchar(150)")
-                        .HasColumnName("nome");
-
-                    b.Property<long>("NumeroDeSerie")
-                        .HasColumnType("bigint")
-                        .HasColumnName("numero_serie");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int")
-                        .HasColumnName("quantidade");
-
-                    b.Property<string>("TipoItem")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)")
-                        .HasColumnName("tipo_item");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoriaId");
-
-                    b.HasIndex("LocalizacaoId");
-
-                    b.HasIndex("ModeloId");
-
-                    b.ToTable("cadastro_geral_itens", (string)null);
-                });
-
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Categoria", b =>
                 {
                     b.Property<Guid>("Id")
@@ -88,7 +30,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
                         .HasColumnName("id");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("descricao");
 
@@ -103,6 +44,53 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.ToTable("categorias", (string)null);
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Equipamento", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<Guid?>("CategoriaId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("categoria_id");
+
+                    b.Property<DateTime?>("DataAquisicao")
+                        .HasColumnType("date")
+                        .HasColumnName("data_aquisicao");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("text")
+                        .HasColumnName("descricao");
+
+                    b.Property<Guid?>("LocalizacaoId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("localizacao_id");
+
+                    b.Property<Guid?>("ModeloId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("modelo_id");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(150)")
+                        .HasColumnName("nome");
+
+                    b.Property<long?>("NumeroDeSerie")
+                        .HasColumnType("bigint")
+                        .HasColumnName("numero_de_serie");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
+
+                    b.HasIndex("LocalizacaoId");
+
+                    b.HasIndex("ModeloId");
+
+                    b.ToTable("equipamentos", (string)null);
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Localizacao", b =>
                 {
                     b.Property<Guid>("Id")
@@ -111,7 +99,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
                         .HasColumnName("id");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("descricao");
 
@@ -134,7 +121,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
                         .HasColumnName("id");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("descricao");
 
@@ -149,25 +135,22 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.ToTable("modelos", (string)null);
                 });
 
-            modelBuilder.Entity("SistemaManutencao.Domain.Entities.CadastroGeralItem", b =>
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Equipamento", b =>
                 {
                     b.HasOne("SistemaManutencao.Domain.Entities.Categoria", "Categoria")
-                        .WithMany("CadastroGeralItems")
+                        .WithMany("Equipamentos")
                         .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("SistemaManutencao.Domain.Entities.Localizacao", "Localizacao")
-                        .WithMany("CadastroGeralItems")
+                        .WithMany("Equipamentos")
                         .HasForeignKey("LocalizacaoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("SistemaManutencao.Domain.Entities.Modelo", "Modelo")
-                        .WithMany("CadastroGeralItems")
+                        .WithMany("Equipamentos")
                         .HasForeignKey("ModeloId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Categoria");
 
@@ -178,17 +161,17 @@ namespace SistemaManutencao.Infra.Data.Migrations
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Categoria", b =>
                 {
-                    b.Navigation("CadastroGeralItems");
+                    b.Navigation("Equipamentos");
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Localizacao", b =>
                 {
-                    b.Navigation("CadastroGeralItems");
+                    b.Navigation("Equipamentos");
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Modelo", b =>
                 {
-                    b.Navigation("CadastroGeralItems");
+                    b.Navigation("Equipamentos");
                 });
 #pragma warning restore 612, 618
         }

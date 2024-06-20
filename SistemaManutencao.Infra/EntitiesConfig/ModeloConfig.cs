@@ -28,9 +28,10 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("descricao")
                 .HasColumnType("text");
 
-            builder.HasMany(m => m.CadastroGeralItems)
-                .WithOne(c => c.Modelo)
-                .HasForeignKey(c => c.ModeloId);
+            builder.HasMany(m => m.Equipamentos)
+                .WithOne(e => e.Modelo)
+                .HasForeignKey(e => e.ModeloId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

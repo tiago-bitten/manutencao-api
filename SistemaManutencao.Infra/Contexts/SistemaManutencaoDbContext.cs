@@ -11,14 +11,14 @@ namespace SistemaManutencao.Infra.Data.Contexts
         {
         }
 
-        public DbSet<CadastroGeralItem> CadastroGeralItems { get; set; }
+        public DbSet<Equipamento> Equipamentos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Localizacao> Localizacoes { get; set; }
         public DbSet<Modelo> Modelos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CadastroGeralItemConfig());
+            modelBuilder.ApplyConfiguration(new EquipamentoConfig());
             modelBuilder.ApplyConfiguration(new CategoriaConfig());
             modelBuilder.ApplyConfiguration(new LocalizacaoConfig());
             modelBuilder.ApplyConfiguration(new ModeloConfig());

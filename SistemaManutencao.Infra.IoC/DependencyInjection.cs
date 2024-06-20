@@ -33,7 +33,6 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IModeloRepository, ModeloRepository>();
             services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
-            services.AddScoped<ICadastroGeralItemRepository, CadastroItemGeralRepository>();
 
             return services;
         }
