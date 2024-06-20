@@ -39,6 +39,8 @@ namespace SistemaManutencao.Infra.IoC
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<IModeloService, ModeloService>();
+            services.AddScoped<ICategoriaService, CategoriaService>();
+            services.AddScoped<ILocalizacaoService, LocalizacaoService>();
 
             return services;
         }
