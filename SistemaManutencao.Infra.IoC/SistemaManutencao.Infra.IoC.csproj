@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -23,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SistemaManutencao.Application\SistemaManutencao.Application.csproj" />
     <ProjectReference Include="..\SistemaManutencao.Infra\SistemaManutencao.Infra.Data.csproj" />
+    <ProjectReference Include="..\SistemaManutencao.Domain\SistemaManutencao.Domain.csproj" />
   </ItemGroup>
 
 </Project>

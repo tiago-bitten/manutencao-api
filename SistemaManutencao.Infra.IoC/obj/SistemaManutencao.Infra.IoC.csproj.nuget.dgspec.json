@@ -53,9 +53,13 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[11.0.0, )"
             }
           },
           "imports": [
@@ -170,6 +174,9 @@
               "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj": {
                 "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj"
               },
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj"
+              },
               "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj": {
                 "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj"
               }
@@ -189,6 +196,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

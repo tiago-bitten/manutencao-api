@@ -42,6 +42,7 @@ namespace SistemaManutencao.API.Controllers
         {
             var categoriasDTO = await _getAllCategorias.ExecuteAsync();
 
+
             return Ok(categoriasDTO);
         }
 

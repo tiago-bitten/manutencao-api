@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SistemaManutencao.Application.DTOs.Mappings;
+using SistemaManutencao.Application.DTOs.Validators.Modelo;
 using SistemaManutencao.Application.Services;
 using SistemaManutencao.Application.UseCases.Categoria;
 using SistemaManutencao.Application.UseCases.Modelo;
@@ -56,6 +58,14 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<GetModeloById>();
             services.AddScoped<GetAllModelos>();
             services.AddScoped<UpdateModelo>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddControllersAndVallidators(this IServiceCollection services)
+        {
+            services.AddControllers()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateModeloDTOValidator>());
 
             return services;
         }

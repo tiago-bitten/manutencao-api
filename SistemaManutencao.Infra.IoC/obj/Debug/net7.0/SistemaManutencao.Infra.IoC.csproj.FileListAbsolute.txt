@@ -39,3 +39,5 @@ C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Infra.
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Infra.IoC\obj\Debug\net7.0\ref\SistemaManutencao.Infra.IoC.dll
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Infra.IoC\bin\Debug\net7.0\SistemaManutencao.Application.dll
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Infra.IoC\bin\Debug\net7.0\SistemaManutencao.Application.pdb
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Infra.IoC\bin\Debug\net7.0\SistemaManutencao.Application.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Infra.IoC\bin\Debug\net7.0\SistemaManutencao.Application.pdb

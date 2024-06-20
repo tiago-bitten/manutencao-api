@@ -25,3 +25,7 @@ C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Applic
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Domain.pdb
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.csproj.AssemblyReference.cache
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.csproj.CopyComplete
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Domain.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\bin\Debug\net7.0\SistemaManutencao.Domain.pdb
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.csproj.AssemblyReference.cache
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.Application\obj\Debug\net7.0\SistemaManutencao.Application.csproj.CopyComplete

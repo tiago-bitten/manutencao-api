@@ -1,10 +1,25 @@
+using FluentValidation.AspNetCore;
+using SistemaManutencao.API.Filters;
+using SistemaManutencao.API.Middlewares;
+using SistemaManutencao.Application.DTOs.Validators.Modelo;
 using SistemaManutencao.Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//builder.Services.AddControllersAndVallidators();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(opt =>
+{
+    opt.Filters.Add<FiltroRespostaPadrao>();
+    opt.Filters.Add<ValidationExceptionFilter>();
+    opt.ModelValidatorProviders.Clear();
+})
+.AddFluentValidation(fv =>
+{
+    fv.RegisterValidatorsFromAssemblyContaining<CreateModeloDTOValidator>();
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -24,6 +39,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseAuthorization();
 

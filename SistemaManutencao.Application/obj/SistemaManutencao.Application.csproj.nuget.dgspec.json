@@ -53,9 +53,13 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[11.0.0, )"
             }
           },
           "imports": [
