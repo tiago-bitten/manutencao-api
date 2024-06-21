@@ -31,7 +31,7 @@ namespace SistemaManutencao.Application.UseCases.Equipamentos
             var equipamento = await _equipamentoRepository.GetByIdAsync(id);
 
             if (equipamento == null)
-                throw new EntidadeNaoEncontradaException("EX10002", "Equipamento não encontrado");
+                throw new EntidadeNaoEncontradaException("EX10002", "Equipamento");
 
             if (!string.IsNullOrEmpty(dto.Nome))
                 equipamento.Nome = dto.Nome;

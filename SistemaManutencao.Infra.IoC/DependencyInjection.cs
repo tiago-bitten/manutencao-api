@@ -8,6 +8,7 @@ using SistemaManutencao.Application.DTOs.Validators.Modelo;
 using SistemaManutencao.Application.Services;
 using SistemaManutencao.Application.UseCases.Categorias;
 using SistemaManutencao.Application.UseCases.Equipamentos;
+using SistemaManutencao.Application.UseCases.Localizacoes;
 using SistemaManutencao.Application.UseCases.Modelos;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Domain.Interfaces.Services;
@@ -17,6 +18,7 @@ using SistemaManutencao.Infra.Data.Repositories;
 namespace SistemaManutencao.Infra.IoC
 {
     public static class DependencyInjection
+
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
@@ -36,6 +38,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IModeloRepository, ModeloRepository>();
             services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
+            services.AddScoped<IManutencaoRepository, ManutencaoRepository>();
 
             return services;
         }
@@ -45,6 +48,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IModeloService, ModeloService>();
             services.AddScoped<ICategoriaService, CategoriaService>();
             services.AddScoped<ILocalizacaoService, LocalizacaoService>();
+            services.AddScoped<IManutencaoService, ManutencaoService>();
 
             return services;
         }
@@ -65,6 +69,11 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<GetEquipamentoById>();
             services.AddScoped<GetAllEquipamentos>();
             services.AddScoped<UpdateEquipamento>();
+
+            services.AddScoped<CreateLocalizacao>();
+            services.AddScoped<GetLocalizacaoById>();
+            services.AddScoped<GetAllLocalizacoes>();
+            services.AddScoped<UpdateLocalizacao>();
 
             return services;
         }

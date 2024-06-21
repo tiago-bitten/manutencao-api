@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
+using SistemaManutencao.Domain.Entities;
+using SistemaManutencao.Domain.Exceptions;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 
 namespace SistemaManutencao.Application.UseCases.Categorias;
@@ -20,9 +22,9 @@ public class UpdateCategoria
         var categoria = await _categoriaRepository.GetByIdAsync(id);
 
         if (categoria == null)
-            throw new Exception("Categoria não encontrada");
+            throw new EntidadeNaoEncontradaException("EX10003", "Categoria");
 
-        categoria = _mapper.Map<Domain.Entities.Categoria>(dto);
+        categoria = _mapper.Map<Categoria>(dto);
 
         _categoriaRepository.Update(categoria);
 

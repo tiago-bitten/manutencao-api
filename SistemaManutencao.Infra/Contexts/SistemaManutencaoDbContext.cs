@@ -11,6 +11,7 @@ namespace SistemaManutencao.Infra.Data.Contexts
         {
         }
 
+        public DbSet<Manutencao> Manutencaos { get; set; }
         public DbSet<Equipamento> Equipamentos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Localizacao> Localizacoes { get; set; }
@@ -18,6 +19,7 @@ namespace SistemaManutencao.Infra.Data.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new ManutencaoConfig());
             modelBuilder.ApplyConfiguration(new EquipamentoConfig());
             modelBuilder.ApplyConfiguration(new CategoriaConfig());
             modelBuilder.ApplyConfiguration(new LocalizacaoConfig());

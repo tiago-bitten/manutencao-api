@@ -22,7 +22,7 @@ namespace SistemaManutencao.Application.Services
 
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
-                throw new EntidadeNaoEncontradaException("EX10001", nameof(T));
+                throw new EntidadeNaoEncontradaException("EX10001", "EntidadeGenerica");
 
             return entity;
         }

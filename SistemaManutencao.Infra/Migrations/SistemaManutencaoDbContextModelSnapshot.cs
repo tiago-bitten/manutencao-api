@@ -113,6 +113,49 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.ToTable("localizacoes", (string)null);
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Manutencao", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<DateTime>("DataConclusao")
+                        .HasColumnType("timestamp")
+                        .HasColumnName("data_conclusao");
+
+                    b.Property<DateTime>("DataInicio")
+                        .HasColumnType("timestamp")
+                        .HasColumnName("data_inicio");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("EquipamentoId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("equipamento_id");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("status");
+
+                    b.Property<string>("TipoManutencao")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("tipo_manutencao");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EquipamentoId");
+
+                    b.ToTable("manutencoes", (string)null);
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Modelo", b =>
                 {
                     b.Property<Guid>("Id")
@@ -159,9 +202,25 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.Navigation("Modelo");
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Manutencao", b =>
+                {
+                    b.HasOne("SistemaManutencao.Domain.Entities.Equipamento", "Equipamento")
+                        .WithMany("Manutencoes")
+                        .HasForeignKey("EquipamentoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Equipamento");
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Categoria", b =>
                 {
                     b.Navigation("Equipamentos");
+                });
+
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Equipamento", b =>
+                {
+                    b.Navigation("Manutencoes");
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Localizacao", b =>
