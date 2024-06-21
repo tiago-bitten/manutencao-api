@@ -1,4 +1,5 @@
-﻿using SistemaManutencao.Domain.Interfaces.Repositories;
+﻿using SistemaManutencao.Domain.Exceptions;
+using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Domain.Interfaces.Services;
 using System;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace SistemaManutencao.Application.Services
 
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
-                throw new ArgumentException($"{nameof(T)} não foi encontrado");
+                throw new EntidadeNaoEncontradaException("EX10001", nameof(T));
 
             return entity;
         }

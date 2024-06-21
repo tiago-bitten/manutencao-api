@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.API\\SistemaManutencao.API.csproj": {}
+    "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.API\\SistemaManutencao.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.API\\SistemaManutencao.API.csproj": {
+    "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.API\\SistemaManutencao.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.API\\SistemaManutencao.API.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.API\\SistemaManutencao.API.csproj",
         "projectName": "SistemaManutencao.API",
-        "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.API\\SistemaManutencao.API.csproj",
-        "packagesPath": "C:\\Users\\teste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.API\\obj\\",
+        "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.API\\SistemaManutencao.API.csproj",
+        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\teste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj": {
-                "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj"
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj"
               },
-              "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj": {
-                "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj"
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj"
               }
             }
           }
@@ -86,24 +86,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj": {
+    "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj",
         "projectName": "SistemaManutencao.Application",
-        "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj",
-        "packagesPath": "C:\\Users\\teste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\obj\\",
+        "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj",
+        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\teste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -119,8 +119,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
-                "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj"
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj"
               }
             }
           }
@@ -164,24 +164,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
+    "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj",
         "projectName": "SistemaManutencao.Domain",
-        "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj",
-        "packagesPath": "C:\\Users\\teste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\obj\\",
+        "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj",
+        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\teste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -224,24 +224,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj": {
+    "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj",
         "projectName": "SistemaManutencao.Infra.IoC",
-        "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj",
-        "packagesPath": "C:\\Users\\teste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra.IoC\\obj\\",
+        "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj",
+        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\teste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -257,14 +257,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj": {
-                "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj"
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Application\\SistemaManutencao.Application.csproj"
               },
-              "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
-                "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj"
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj"
               },
-              "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj"
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj"
               }
             }
           }
@@ -334,24 +334,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj": {
+    "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj",
         "projectName": "SistemaManutencao.Infra.Data",
-        "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\teste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Infra\\obj\\",
+        "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\teste\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -367,8 +367,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
-                "projectPath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj"
+              "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj": {
+                "projectPath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj"
               }
             }
           }
@@ -432,7 +432,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

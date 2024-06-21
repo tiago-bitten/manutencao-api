@@ -27,6 +27,8 @@ namespace SistemaManutencao.API.Filters
                 {
                     StatusCode = objectResult.StatusCode
                 };
+
+                context.ExceptionHandled = true;
             }
         }
     }

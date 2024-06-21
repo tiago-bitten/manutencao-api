@@ -62,6 +62,9 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<UpdateModelo>();
 
             services.AddScoped<CreateEquipamento>();
+            services.AddScoped<GetEquipamentoById>();
+            services.AddScoped<GetAllEquipamentos>();
+            services.AddScoped<UpdateEquipamento>();
 
             return services;
         }

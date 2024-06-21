@@ -2,6 +2,7 @@
 using System.Text.Json;
 using FluentValidation;
 using SistemaManutencao.Application.Responses;
+using SistemaManutencao.Domain.Exceptions;
 
 namespace SistemaManutencao.API.Middlewares
 {
@@ -51,6 +52,10 @@ namespace SistemaManutencao.API.Middlewares
                 case KeyNotFoundException:
                     response.StatusCode = (int)HttpStatusCode.NotFound;
                     apiResponse.Mensagem = "Recurso não encontrado";
+                    break;
+                case EntidadeNaoEncontradaException entidadeNaoEncontradaException:
+                    response.StatusCode = (int)HttpStatusCode.NotFound;
+                    apiResponse.Mensagem = entidadeNaoEncontradaException.Message;
                     break;
                 default:
                     response.StatusCode = (int)HttpStatusCode.InternalServerError;
