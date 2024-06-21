@@ -16,11 +16,12 @@ namespace SistemaManutencao.Application.Services
 
         public async Task<T> ValidarExistenciaAsync(Guid id)
         {
+            if (id == null)
+                return null;
+
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
-            {
                 throw new ArgumentException($"{nameof(T)} não foi encontrado");
-            }
 
             return entity;
         }

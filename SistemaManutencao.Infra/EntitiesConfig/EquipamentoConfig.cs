@@ -29,7 +29,7 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
 
             builder.Property(e => e.NumeroDeSerie)
                 .HasColumnName("numero_de_serie")
-                .HasColumnType("bigint");
+                .HasColumnType("varchar(100)");
             
             builder.Property(e => e.DataAquisicao)
                 .HasColumnName("data_aquisicao")

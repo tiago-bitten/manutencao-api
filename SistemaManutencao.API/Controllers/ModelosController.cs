@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Modelo;
-using SistemaManutencao.Application.UseCases.Modelo;
+using SistemaManutencao.Application.UseCases.Modelos;
 
 namespace SistemaManutencao.API.Controllers
 {

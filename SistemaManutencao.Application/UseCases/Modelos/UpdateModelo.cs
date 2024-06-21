@@ -2,7 +2,7 @@
 using SistemaManutencao.Application.DTOs.Entities.Modelo;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 
-namespace SistemaManutencao.Application.UseCases.Modelo
+namespace SistemaManutencao.Application.UseCases.Modelos
 {
     public class UpdateModelo
     {

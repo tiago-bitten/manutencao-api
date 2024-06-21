@@ -108,3 +108,6 @@ C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.A
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\SistemaManutencao.Application.dll
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\SistemaManutencao.Application.pdb
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll

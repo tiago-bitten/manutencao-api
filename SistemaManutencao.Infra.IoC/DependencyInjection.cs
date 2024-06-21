@@ -6,8 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using SistemaManutencao.Application.DTOs.Mappings;
 using SistemaManutencao.Application.DTOs.Validators.Modelo;
 using SistemaManutencao.Application.Services;
-using SistemaManutencao.Application.UseCases.Categoria;
-using SistemaManutencao.Application.UseCases.Modelo;
+using SistemaManutencao.Application.UseCases.Categorias;
+using SistemaManutencao.Application.UseCases.Equipamentos;
+using SistemaManutencao.Application.UseCases.Modelos;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Domain.Interfaces.Services;
 using SistemaManutencao.Infra.Data.Contexts;
@@ -24,12 +25,14 @@ namespace SistemaManutencao.Infra.IoC
 
             services.AddAutoMapper(typeof(CategoriaProfile));
             services.AddAutoMapper(typeof(ModeloProfile));
+            services.AddAutoMapper(typeof(EquipamentoProfile));
 
             return services;
         }
 
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
+            services.AddScoped<IEquipamentoRepository, EquipamentoRepository>();
             services.AddScoped<IModeloRepository, ModeloRepository>();
             services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
@@ -57,6 +60,8 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<GetModeloById>();
             services.AddScoped<GetAllModelos>();
             services.AddScoped<UpdateModelo>();
+
+            services.AddScoped<CreateEquipamento>();
 
             return services;
         }

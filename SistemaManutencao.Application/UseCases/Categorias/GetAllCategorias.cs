@@ -2,7 +2,7 @@
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 
-namespace SistemaManutencao.Application.UseCases.Categoria
+namespace SistemaManutencao.Application.UseCases.Categorias
 {
     public class GetAllCategorias
     {

@@ -76,8 +76,8 @@ namespace SistemaManutencao.Infra.Data.Migrations
                         .HasColumnType("varchar(150)")
                         .HasColumnName("nome");
 
-                    b.Property<long?>("NumeroDeSerie")
-                        .HasColumnType("bigint")
+                    b.Property<string>("NumeroDeSerie")
+                        .HasColumnType("varchar(100)")
                         .HasColumnName("numero_de_serie");
 
                     b.HasKey("Id");

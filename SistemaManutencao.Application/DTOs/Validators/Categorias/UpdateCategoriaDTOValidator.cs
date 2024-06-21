@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
 
-namespace SistemaManutencao.Application.DTOs.Validators.Modelo
+namespace SistemaManutencao.Application.DTOs.Validators.Categorias
 {
-    public class UpdateCategoriaDTOValidator : AbstractValidator<UpdateCategoriaDTO>    
+    public class UpdateCategoriaDTOValidator : AbstractValidator<UpdateCategoriaDTO>
     {
         public UpdateCategoriaDTOValidator()
         {

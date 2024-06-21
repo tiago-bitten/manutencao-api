@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
-using SistemaManutencao.Application.UseCases.Categoria;
+using SistemaManutencao.Application.UseCases.Categorias;
 
 namespace SistemaManutencao.API.Controllers
 {
