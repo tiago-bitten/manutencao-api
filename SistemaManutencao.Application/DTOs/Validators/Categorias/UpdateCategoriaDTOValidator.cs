@@ -13,7 +13,6 @@ namespace SistemaManutencao.Application.DTOs.Validators.Categorias
                 .MinimumLength(2).WithMessage("Nome deve ter no mínimo 2 caracteres");
 
             RuleFor(r => r.Descricao)
-                .NotEmpty().WithMessage("Descrição é obrigatória")
                 .MaximumLength(500).WithMessage("Descrição deve ter no máximo 500 caracteres")
                 .MinimumLength(2).WithMessage("Descrição deve ter no mínimo 2 caracteres");
         }
