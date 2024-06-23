@@ -108,6 +108,27 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.ToTable("equipamentos_pecas", (string)null);
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Ferramenta", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("text")
+                        .HasColumnName("descricao");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(150)")
+                        .HasColumnName("nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ferramentas", (string)null);
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Localizacao", b =>
                 {
                     b.Property<Guid>("Id")
@@ -195,6 +216,23 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.ToTable("modelos", (string)null);
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.OrdemServico", b =>
+                {
+                    b.Property<Guid>("ManutencaoId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("manutencao_id");
+
+                    b.Property<Guid>("TecnicoId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("tecnico_id");
+
+                    b.HasKey("ManutencaoId", "TecnicoId");
+
+                    b.HasIndex("TecnicoId");
+
+                    b.ToTable("ordens_servicos", (string)null);
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Peca", b =>
                 {
                     b.Property<Guid>("Id")
@@ -214,6 +252,37 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("pecas", (string)null);
+                });
+
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Tecnico", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Cpf")
+                        .IsRequired()
+                        .HasColumnType("varchar(11)")
+                        .HasColumnName("cpf");
+
+                    b.Property<DateTime>("DataNascimento")
+                        .HasColumnType("date")
+                        .HasColumnName("data_nascimento");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(150)")
+                        .HasColumnName("nome");
+
+                    b.Property<string>("Telefone")
+                        .IsRequired()
+                        .HasColumnType("varchar(15)")
+                        .HasColumnName("telefone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tecnicos", (string)null);
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Equipamento", b =>
@@ -270,6 +339,25 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.Navigation("Equipamento");
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.OrdemServico", b =>
+                {
+                    b.HasOne("SistemaManutencao.Domain.Entities.Manutencao", "Manutencao")
+                        .WithMany("OrdemServicos")
+                        .HasForeignKey("ManutencaoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SistemaManutencao.Domain.Entities.Tecnico", "Tecnico")
+                        .WithMany("OrdemServicos")
+                        .HasForeignKey("TecnicoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Manutencao");
+
+                    b.Navigation("Tecnico");
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Categoria", b =>
                 {
                     b.Navigation("Equipamentos");
@@ -287,6 +375,11 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.Navigation("Equipamentos");
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Manutencao", b =>
+                {
+                    b.Navigation("OrdemServicos");
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Modelo", b =>
                 {
                     b.Navigation("Equipamentos");
@@ -295,6 +388,11 @@ namespace SistemaManutencao.Infra.Data.Migrations
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Peca", b =>
                 {
                     b.Navigation("EquipamentoPecas");
+                });
+
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Tecnico", b =>
+                {
+                    b.Navigation("OrdemServicos");
                 });
 #pragma warning restore 612, 618
         }

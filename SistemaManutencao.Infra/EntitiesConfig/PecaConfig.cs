@@ -15,6 +15,7 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
             builder.Property(p => p.Id)
                 .HasColumnName("id")
                 .HasColumnType("uuid")
+                .ValueGeneratedOnAdd()
                 .IsRequired();
 
             builder.Property(p => p.Nome)

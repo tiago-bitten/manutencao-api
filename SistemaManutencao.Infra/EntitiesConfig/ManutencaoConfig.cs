@@ -56,6 +56,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithMany(e => e.Manutencoes)
                 .HasForeignKey(m => m.EquipamentoId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(m => m.OrdemServicos)
+                .WithOne(os => os.Manutencao)
+                .HasForeignKey(os => os.ManutencaoId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

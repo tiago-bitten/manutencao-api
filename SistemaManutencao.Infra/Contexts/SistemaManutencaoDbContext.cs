@@ -18,6 +18,9 @@ namespace SistemaManutencao.Infra.Data.Contexts
         public DbSet<Modelo> Modelos { get; set; }
         public DbSet<Peca> Pecas { get; set; }
         public DbSet<EquipamentoPeca> EquipamentoPecas { get; set; }
+        public DbSet<Ferramenta> Ferramentas { get; set; }
+        public DbSet<Tecnico> Tecnicos { get; set; }
+        public DbSet<OrdemServico> OrdensServicos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +31,9 @@ namespace SistemaManutencao.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new ModeloConfig());
             modelBuilder.ApplyConfiguration(new PecaConfig());
             modelBuilder.ApplyConfiguration(new EquiapmentoPecaConfig());
+            modelBuilder.ApplyConfiguration(new FerramentaConfig());
+            modelBuilder.ApplyConfiguration(new TecnicoConfig());
+            modelBuilder.ApplyConfiguration(new OrdemServicoConfig());
         }
     }
 }
