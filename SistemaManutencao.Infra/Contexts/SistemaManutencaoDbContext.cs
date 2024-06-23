@@ -33,7 +33,7 @@ namespace SistemaManutencao.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new LocalizacaoConfig());
             modelBuilder.ApplyConfiguration(new ModeloConfig());
             modelBuilder.ApplyConfiguration(new PecaConfig());
-            modelBuilder.ApplyConfiguration(new EquiapmentoPecaConfig());
+            modelBuilder.ApplyConfiguration(new EquipamentoPecaConfig());
             modelBuilder.ApplyConfiguration(new FerramentaConfig());
             modelBuilder.ApplyConfiguration(new TecnicoConfig());
             modelBuilder.ApplyConfiguration(new OrdemServicoConfig());

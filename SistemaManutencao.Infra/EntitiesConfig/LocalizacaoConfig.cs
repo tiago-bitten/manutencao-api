@@ -30,7 +30,7 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
             builder.HasMany(l => l.Equipamentos)
                 .WithOne(e => e.Localizacao)
                 .HasForeignKey(e => e.LocalizacaoId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

@@ -12,13 +12,15 @@ namespace SistemaManutencao.API.Controllers
         private readonly GetCategoriaById _getCategoriaById;
         private readonly GetAllCategorias _getAllCategorias;
         private readonly UpdateCategoria _updateCategoria;
+        private readonly DeleteCategoria _deleteCategoria;
 
-        public CategoriasController(CreateCategoria createCategoria, GetCategoriaById getCategoriaById, GetAllCategorias getAllCategorias, UpdateCategoria updateCategoria)
+        public CategoriasController(CreateCategoria createCategoria, GetCategoriaById getCategoriaById, GetAllCategorias getAllCategorias, UpdateCategoria updateCategoria, DeleteCategoria deleteCategoria)
         {
             _createCategoria = createCategoria;
             _getCategoriaById = getCategoriaById;
             _getAllCategorias = getAllCategorias;
             _updateCategoria = updateCategoria;
+            _deleteCategoria = deleteCategoria;
         }
 
         [HttpPost("Create")]
@@ -52,6 +54,14 @@ namespace SistemaManutencao.API.Controllers
             var categoriaDTO = await _updateCategoria.ExecuteAsync(id, dto);
             
             return Ok(categoriaDTO);
+        }
+
+        [HttpDelete("Delete/{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _deleteCategoria.ExecuteAsync(id);
+
+            return NoContent();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SistemaManutencao.Application.DTOs.Entities.Categoria;
+using SistemaManutencao.Application.DTOs.Entities.Localizacoes;
 using SistemaManutencao.Application.DTOs.Entities.Modelo;
 
 namespace SistemaManutencao.Application.DTOs.Entities.Equipamento
@@ -12,5 +13,6 @@ namespace SistemaManutencao.Application.DTOs.Entities.Equipamento
         public DateTime? DataAquisicao { get; set; }
         public GetCategoriaDTO? Categoria { get; set; }
         public GetModeloDTO? Modelo { get; set; }
+        public GetLocalizacaoDTO? Localizacao { get; set; }
     }
 }

@@ -31,7 +31,7 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
             builder.HasMany(m => m.Equipamentos)
                 .WithOne(e => e.Modelo)
                 .HasForeignKey(e => e.ModeloId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

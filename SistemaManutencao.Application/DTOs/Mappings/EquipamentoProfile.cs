@@ -14,9 +14,7 @@ namespace SistemaManutencao.Application.DTOs.Mappings
                 .ForMember(dest => dest.Categoria, opt => opt.Ignore())
                 .ForMember(dest => dest.Localizacao, opt => opt.Ignore());
 
-            CreateMap<Equipamento, GetEquipamentoDTO>()
-                .ForMember(dest => dest.Modelo, opt => opt.MapFrom(src => src.Modelo))
-                .ForMember(dest => dest.Categoria, opt => opt.MapFrom(src => src.Categoria));
+            CreateMap<Equipamento, GetEquipamentoDTO>();
             
             CreateMap<UpdateEquipamentoDTO, Equipamento>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())

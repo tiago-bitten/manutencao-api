@@ -13,13 +13,15 @@ namespace SistemaManutencao.API.Controllers
         private readonly GetModeloById _getModeloById;
         private readonly GetAllModelos _getAllModelos;
         private readonly UpdateModelo _updateModelo;
+        private readonly DeleteModelo _deleteModelo;
 
-        public ModelosController(CreateModelo createModelo, GetModeloById getModeloById, GetAllModelos getAllModelos, UpdateModelo updateModelo)
+        public ModelosController(CreateModelo createModelo, GetModeloById getModeloById, GetAllModelos getAllModelos, UpdateModelo updateModelo, DeleteModelo deleteModelo)
         {
             _createModelo = createModelo;
             _getModeloById = getModeloById;
             _getAllModelos = getAllModelos;
             _updateModelo = updateModelo;
+            _deleteModelo = deleteModelo;
         }
 
         [HttpPost("Create")]
@@ -52,6 +54,14 @@ namespace SistemaManutencao.API.Controllers
             var modeloDTO = await _updateModelo.ExecuteAsync(id, dto);
 
             return Ok(modeloDTO);
+        }
+
+        [HttpDelete("Delete/{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _deleteModelo.ExecuteAsync(id);
+
+            return NoContent();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SistemaManutencao.Application.DTOs.Entities.Localizacoes;
 using SistemaManutencao.Domain.Exceptions;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 
@@ -15,14 +16,14 @@ namespace SistemaManutencao.Application.UseCases.Localizacoes
             _mapper = mapper;
         }
 
-        public async Task<GetLocalizacaoById> ExecuteAsync(Guid id)
+        public async Task<GetLocalizacaoDTO> ExecuteAsync(Guid id)
         {
             var localizacao = await _localizacaoRepository.GetByIdAsync(id);
 
             if (localizacao == null)
                 throw new EntidadeNaoEncontradaException("EX10004", "Localizacao");
 
-            return _mapper.Map<GetLocalizacaoById>(localizacao);
+            return _mapper.Map<GetLocalizacaoDTO>(localizacao);
         }
     }
 }

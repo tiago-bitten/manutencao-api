@@ -28,6 +28,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddAutoMapper(typeof(CategoriaProfile));
             services.AddAutoMapper(typeof(ModeloProfile));
             services.AddAutoMapper(typeof(EquipamentoProfile));
+            services.AddAutoMapper(typeof(LocalizacaoProfile));
 
             return services;
         }
@@ -49,6 +50,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<ICategoriaService, CategoriaService>();
             services.AddScoped<ILocalizacaoService, LocalizacaoService>();
             services.AddScoped<IManutencaoService, ManutencaoService>();
+            services.AddScoped<IEquipamentoService, EquipamentoService>();
 
             return services;
         }
@@ -59,21 +61,25 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<GetCategoriaById>();
             services.AddScoped<GetAllCategorias>();
             services.AddScoped<UpdateCategoria>();
+            services.AddScoped<DeleteCategoria>();
 
             services.AddScoped<CreateModelo>();
             services.AddScoped<GetModeloById>();
             services.AddScoped<GetAllModelos>();
             services.AddScoped<UpdateModelo>();
+            services.AddScoped<DeleteModelo>();
 
             services.AddScoped<CreateEquipamento>();
             services.AddScoped<GetEquipamentoById>();
             services.AddScoped<GetAllEquipamentos>();
             services.AddScoped<UpdateEquipamento>();
+            services.AddScoped<DeleteEquipamento>();
 
             services.AddScoped<CreateLocalizacao>();
             services.AddScoped<GetLocalizacaoById>();
             services.AddScoped<GetAllLocalizacoes>();
             services.AddScoped<UpdateLocalizacao>();
+            services.AddScoped<DeleteLocalizacao>();
 
             return services;
         }

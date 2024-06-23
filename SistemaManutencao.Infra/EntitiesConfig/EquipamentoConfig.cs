@@ -48,24 +48,24 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("uuid");
 
             builder.HasOne(e => e.Modelo)
-                .WithMany()
+                .WithMany(m => m.Equipamentos)
                 .HasForeignKey(e => e.ModeloId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(e => e.Localizacao)
                 .WithMany()
                 .HasForeignKey(e => e.LocalizacaoId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasOne(e => e.Categoria)
                 .WithMany()
                 .HasForeignKey(e => e.CategoriaId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(e => e.EquipamentoPecas)
                 .WithOne(ep => ep.Equipamento)
                 .HasForeignKey(ep => ep.EquipamentoId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(e => e.Manutencoes)
                 .WithOne(m => m.Equipamento)

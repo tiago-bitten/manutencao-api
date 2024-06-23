@@ -12,13 +12,15 @@ namespace SistemaManutencao.API.Controllers
         private readonly GetEquipamentoById _getEquipamentoById;
         private readonly GetAllEquipamentos _getAllEquipamentos;
         private readonly UpdateEquipamento _updateEquipamento;
+        private readonly DeleteEquipamento _deleteEquipamento;
 
-        public EquipamentosController(CreateEquipamento createEquipamento, GetEquipamentoById getEquipamentoById, GetAllEquipamentos getAllEquipamentos, UpdateEquipamento updateEquipamento)
+        public EquipamentosController(CreateEquipamento createEquipamento, GetEquipamentoById getEquipamentoById, GetAllEquipamentos getAllEquipamentos, UpdateEquipamento updateEquipamento, DeleteEquipamento deleteEquipamento)
         {
             _createEquipamento = createEquipamento;
             _getEquipamentoById = getEquipamentoById;
             _getAllEquipamentos = getAllEquipamentos;
             _updateEquipamento = updateEquipamento;
+            _deleteEquipamento = deleteEquipamento;
         }
 
         [HttpPost("Create")]
@@ -51,6 +53,14 @@ namespace SistemaManutencao.API.Controllers
             var equipamentoDTO = await _updateEquipamento.ExecuteAsync(id, dto);
 
             return Ok(equipamentoDTO);
+        }
+
+        [HttpDelete("Delete/{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _deleteEquipamento.ExecuteAsync(id);
+
+            return NoContent();
         }
     }
 }

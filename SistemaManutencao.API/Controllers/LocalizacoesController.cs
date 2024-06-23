@@ -12,13 +12,15 @@ namespace SistemaManutencao.API.Controllers
         private readonly GetLocalizacaoById _getLocalizacaoById;
         private readonly GetAllLocalizacoes _getAllLocalizacoes;
         private readonly UpdateLocalizacao _updateLocalizacao;
+        private readonly DeleteLocalizacao _deleteLocalizacao;
 
-        public LocalizacoesController(CreateLocalizacao createLocalizacao, GetLocalizacaoById getLocalizacaoById, GetAllLocalizacoes getAllLocalizacoes, UpdateLocalizacao updateLocalizacao)
+        public LocalizacoesController(CreateLocalizacao createLocalizacao, GetLocalizacaoById getLocalizacaoById, GetAllLocalizacoes getAllLocalizacoes, UpdateLocalizacao updateLocalizacao, DeleteLocalizacao deleteLocalizacao)
         {
             _createLocalizacao = createLocalizacao;
             _getLocalizacaoById = getLocalizacaoById;
             _getAllLocalizacoes = getAllLocalizacoes;
             _updateLocalizacao = updateLocalizacao;
+            _deleteLocalizacao = deleteLocalizacao;
         }
 
         [HttpPost("Create")]
@@ -54,6 +56,14 @@ namespace SistemaManutencao.API.Controllers
             var localizacao = await _updateLocalizacao.ExecuteAsync(id, dto);
 
             return Ok(localizacao);
+        }
+
+        [HttpDelete("Delete/{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _deleteLocalizacao.ExecuteAsync(id);
+
+            return NoContent();
         }
     }
 }

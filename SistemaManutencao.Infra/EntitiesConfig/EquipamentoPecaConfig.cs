@@ -4,7 +4,7 @@ using SistemaManutencao.Domain.Entities;
 
 namespace SistemaManutencao.Infra.Data.EntitiesConfig
 {
-    public class EquiapmentoPecaConfig : IEntityTypeConfiguration<EquipamentoPeca>
+    public class EquipamentoPecaConfig : IEntityTypeConfiguration<EquipamentoPeca>
     {
         public void Configure(EntityTypeBuilder<EquipamentoPeca> builder)
         {

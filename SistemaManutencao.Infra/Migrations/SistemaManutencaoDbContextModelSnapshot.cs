@@ -365,17 +365,17 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.HasOne("SistemaManutencao.Domain.Entities.Categoria", "Categoria")
                         .WithMany("Equipamentos")
                         .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("SistemaManutencao.Domain.Entities.Localizacao", "Localizacao")
                         .WithMany("Equipamentos")
                         .HasForeignKey("LocalizacaoId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("SistemaManutencao.Domain.Entities.Modelo", "Modelo")
                         .WithMany("Equipamentos")
                         .HasForeignKey("ModeloId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Categoria");
 

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SistemaManutencao.Application.DTOs.Entities.Localizacoes;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 
 namespace SistemaManutencao.Application.UseCases.Localizacoes
@@ -14,11 +15,11 @@ namespace SistemaManutencao.Application.UseCases.Localizacoes
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<GetLocalizacaoById>> ExecuteAsync()
+        public async Task<IEnumerable<GetLocalizacaoDTO>> ExecuteAsync()
         {
             var localizacoes = await _localizacaoRepository.GetAllAsync();
 
-            return _mapper.Map<IEnumerable<GetLocalizacaoById>>(localizacoes);
+            return _mapper.Map<IEnumerable<GetLocalizacaoDTO>>(localizacoes);
         }
     }
 }
