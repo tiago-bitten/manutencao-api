@@ -7,7 +7,9 @@
 
         public string Cpf { get; set; }
         public DateTime DataNascimento { get; set; }
+        public Guid? EspecializacaoId { get; set; }
 
-        public ICollection<OrdemServico?> OrdemServicos { get; set; }
+        public Especializacao? Especializacao { get; set; }
+        public ICollection<OrdemServico?> OrdensServicos { get; set; }
     }
 }

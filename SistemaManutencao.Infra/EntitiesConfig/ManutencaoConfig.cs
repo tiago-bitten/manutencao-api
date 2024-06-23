@@ -61,6 +61,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithOne(os => os.Manutencao)
                 .HasForeignKey(os => os.ManutencaoId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasMany(m => m.PecasUsadas)
+                .WithOne(pu => pu.Manutencao)
+                .HasForeignKey(pu => pu.ManutencaoId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

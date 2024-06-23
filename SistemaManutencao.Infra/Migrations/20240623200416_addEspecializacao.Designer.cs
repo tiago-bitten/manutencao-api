@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SistemaManutencao.Infra.Data.Contexts;
@@ -11,9 +12,11 @@ using SistemaManutencao.Infra.Data.Contexts;
 namespace SistemaManutencao.Infra.Data.Migrations
 {
     [DbContext(typeof(SistemaManutencaoDbContext))]
-    partial class SistemaManutencaoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240623200416_addEspecializacao")]
+    partial class addEspecializacao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -302,27 +305,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.ToTable("pecas", (string)null);
                 });
 
-            modelBuilder.Entity("SistemaManutencao.Domain.Entities.PecaUsada", b =>
-                {
-                    b.Property<Guid>("PecaId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("peca_id");
-
-                    b.Property<Guid>("ManutencaoId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("manutencao_id");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int")
-                        .HasColumnName("quantidade");
-
-                    b.HasKey("PecaId", "ManutencaoId");
-
-                    b.HasIndex("ManutencaoId");
-
-                    b.ToTable("pecas_usadas", (string)null);
-                });
-
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Tecnico", b =>
                 {
                     b.Property<Guid>("Id")
@@ -441,25 +423,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.Navigation("Tecnico");
                 });
 
-            modelBuilder.Entity("SistemaManutencao.Domain.Entities.PecaUsada", b =>
-                {
-                    b.HasOne("SistemaManutencao.Domain.Entities.Manutencao", "Manutencao")
-                        .WithMany("PecasUsadas")
-                        .HasForeignKey("ManutencaoId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("SistemaManutencao.Domain.Entities.Peca", "Peca")
-                        .WithMany("PecasUsadas")
-                        .HasForeignKey("PecaId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Manutencao");
-
-                    b.Navigation("Peca");
-                });
-
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Tecnico", b =>
                 {
                     b.HasOne("SistemaManutencao.Domain.Entities.Especializacao", "Especializacao")
@@ -495,8 +458,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Manutencao", b =>
                 {
                     b.Navigation("OrdemServicos");
-
-                    b.Navigation("PecasUsadas");
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Modelo", b =>
@@ -512,8 +473,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Peca", b =>
                 {
                     b.Navigation("EquipamentoPecas");
-
-                    b.Navigation("PecasUsadas");
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Tecnico", b =>

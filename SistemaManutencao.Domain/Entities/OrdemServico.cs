@@ -8,7 +8,7 @@
         public Guid TecnicoId { get; set; }
         public Tecnico Tecnico { get; set; }
 
-        //public Guid PapelId { get; set; }
-        //public Papel Papel { get; set; }
+        public Guid PapelId { get; set; }
+        public Papel Papel { get; set; }
     }
 }

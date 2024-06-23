@@ -4,11 +4,11 @@ using SistemaManutencao.Domain.Entities;
 
 namespace SistemaManutencao.Infra.Data.EntitiesConfig
 {
-    public class PecaConfig : IEntityTypeConfiguration<Peca>
+    public class PapelConfig : IEntityTypeConfiguration<Papel>
     {
-        public void Configure(EntityTypeBuilder<Peca> builder)
+        public void Configure(EntityTypeBuilder<Papel> builder)
         {
-            builder.ToTable("pecas");
+            builder.ToTable("papeis");
 
             builder.HasKey(p => p.Id);
 
@@ -27,14 +27,9 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("descricao")
                 .HasColumnType("text");
 
-            builder.HasMany(p => p.EquipamentoPecas)
-                .WithOne(ep => ep.Peca)
-                .HasForeignKey(ep => ep.PecaId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasMany(p => p.PecasUsadas)
-                .WithOne(pu => pu.Peca)
-                .HasForeignKey(pu => pu.PecaId)
+            builder.HasMany(p => p.OrdensServicos)
+                .WithOne(os => os.Papel)
+                .HasForeignKey(os => os.PapelId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

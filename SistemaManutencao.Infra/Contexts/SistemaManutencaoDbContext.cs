@@ -21,6 +21,9 @@ namespace SistemaManutencao.Infra.Data.Contexts
         public DbSet<Ferramenta> Ferramentas { get; set; }
         public DbSet<Tecnico> Tecnicos { get; set; }
         public DbSet<OrdemServico> OrdensServicos { get; set; }
+        public DbSet<Papel> Papeis { get; set; }
+        public DbSet<Especializacao> Especializacoes { get; set; }
+        public DbSet<PecaUsada> PecasUsadas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +37,9 @@ namespace SistemaManutencao.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new FerramentaConfig());
             modelBuilder.ApplyConfiguration(new TecnicoConfig());
             modelBuilder.ApplyConfiguration(new OrdemServicoConfig());
+            modelBuilder.ApplyConfiguration(new PapelConfig());
+            modelBuilder.ApplyConfiguration(new EspecializacaoConfig());
+            modelBuilder.ApplyConfiguration(new PecaUsadaConfig());
         }
     }
 }

@@ -38,9 +38,18 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("date")
                 .IsRequired();
 
-            builder.HasMany(t => t.OrdemServicos)
+            builder.Property(t => t.EspecializacaoId)
+                .HasColumnName("especializacao_id")
+                .HasColumnType("uuid");
+
+            builder.HasMany(t => t.OrdensServicos)
                 .WithOne(os => os.Tecnico)
                 .HasForeignKey(os => os.TecnicoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(t => t.Especializacao)
+                .WithMany(e => e.Tecnicos)
+                .HasForeignKey(t => t.EspecializacaoId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

@@ -12,5 +12,6 @@ namespace SistemaManutencao.Domain.Entities
 
         public Equipamento Equipamento { get; set; }
         public ICollection<OrdemServico?> OrdemServicos { get; set; }
+        public ICollection<PecaUsada?> PecasUsadas { get; set; }
     }
 }
