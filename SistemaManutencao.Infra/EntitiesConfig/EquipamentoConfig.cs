@@ -30,7 +30,7 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
             builder.Property(e => e.NumeroDeSerie)
                 .HasColumnName("numero_de_serie")
                 .HasColumnType("varchar(100)");
-            
+
             builder.Property(e => e.DataAquisicao)
                 .HasColumnName("data_aquisicao")
                 .HasColumnType("date");
@@ -60,6 +60,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
             builder.HasOne(e => e.Categoria)
                 .WithMany()
                 .HasForeignKey(e => e.CategoriaId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasMany(e => e.EquipamentoPecas)
+                .WithOne(ep => ep.Equipamento)
+                .HasForeignKey(ep => ep.EquipamentoId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(e => e.Manutencoes)

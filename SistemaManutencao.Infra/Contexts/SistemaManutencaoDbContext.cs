@@ -16,6 +16,8 @@ namespace SistemaManutencao.Infra.Data.Contexts
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Localizacao> Localizacoes { get; set; }
         public DbSet<Modelo> Modelos { get; set; }
+        public DbSet<Peca> Pecas { get; set; }
+        public DbSet<EquipamentoPeca> EquipamentoPecas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +26,8 @@ namespace SistemaManutencao.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new CategoriaConfig());
             modelBuilder.ApplyConfiguration(new LocalizacaoConfig());
             modelBuilder.ApplyConfiguration(new ModeloConfig());
+            modelBuilder.ApplyConfiguration(new PecaConfig());
+            modelBuilder.ApplyConfiguration(new EquiapmentoPecaConfig());
         }
     }
 }

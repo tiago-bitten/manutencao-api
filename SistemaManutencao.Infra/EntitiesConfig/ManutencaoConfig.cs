@@ -35,7 +35,7 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .IsRequired()
                 .HasConversion(
                     v => v.ToString(),
-                    v => (EStatusManutencao)System.Enum.Parse(typeof(EStatusManutencao),v)
+                    v => (EStatusManutencao)System.Enum.Parse(typeof(EStatusManutencao), v)
                  );
 
             builder.Property(m => m.TipoManutencao)
@@ -44,7 +44,7 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .IsRequired()
                 .HasConversion(
                     v => v.ToString(),
-                    v => (ETipoManutencao)System.Enum.Parse(typeof(ETipoManutencao),v)
+                    v => (ETipoManutencao)System.Enum.Parse(typeof(ETipoManutencao), v)
                 );
 
             builder.Property(m => m.EquipamentoId)
@@ -53,9 +53,8 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .IsRequired();
 
             builder.HasOne(m => m.Equipamento)
-                .WithMany()
+                .WithMany(e => e.Manutencoes)
                 .HasForeignKey(m => m.EquipamentoId)
-                .HasPrincipalKey(e => e.Id)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

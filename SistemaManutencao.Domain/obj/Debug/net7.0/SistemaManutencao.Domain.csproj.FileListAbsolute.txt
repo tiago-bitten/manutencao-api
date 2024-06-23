@@ -21,3 +21,15 @@ C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\refint\SistemaManutencao.Domain.dll
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.pdb
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\ref\SistemaManutencao.Domain.dll
+D:\csharp\manutencao-api\SistemaManutencao.Domain\bin\Debug\net7.0\SistemaManutencao.Domain.deps.json
+D:\csharp\manutencao-api\SistemaManutencao.Domain\bin\Debug\net7.0\SistemaManutencao.Domain.dll
+D:\csharp\manutencao-api\SistemaManutencao.Domain\bin\Debug\net7.0\SistemaManutencao.Domain.pdb
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.AssemblyInfoInputs.cache
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.AssemblyInfo.cs
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.csproj.CoreCompileInputs.cache
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.sourcelink.json
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.dll
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\refint\SistemaManutencao.Domain.dll
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\SistemaManutencao.Domain.pdb
+D:\csharp\manutencao-api\SistemaManutencao.Domain\obj\Debug\net7.0\ref\SistemaManutencao.Domain.dll

@@ -11,6 +11,7 @@
         public Modelo? Modelo { get; set; }
         public Localizacao? Localizacao { get; set; }
         public Categoria? Categoria { get; set; }
-        public ICollection<Manutencao> Manutencoes { get; set; }
+        public ICollection<Manutencao?> Manutencoes { get; set; }
+        public ICollection<EquipamentoPeca?> EquipamentoPecas { get; set; }
     }
 }
