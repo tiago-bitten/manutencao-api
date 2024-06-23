@@ -24,6 +24,9 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasMaxLength(150)
                 .IsRequired();
 
+            builder.HasIndex(c => c.Nome)
+                .HasDatabaseName("ix_categorias_nome");
+
             builder.Property(c => c.Descricao)
                 .HasColumnName("descricao")
                 .HasColumnType("text");
