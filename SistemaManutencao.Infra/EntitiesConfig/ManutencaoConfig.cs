@@ -19,6 +19,18 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .ValueGeneratedOnAdd()
                 .IsRequired();
 
+            builder.Property(m => m.Nome)
+                .HasColumnName("nome")
+                .HasColumnType("varchar(150)")
+                .IsRequired();
+
+            builder.HasIndex(m => m.Nome)
+                .HasDatabaseName("idx_manutencoes_nome");
+
+            builder.Property(m => m.Descricao)
+                .HasColumnName("descricao")
+                .HasColumnType("text");
+
             builder.Property(m => m.DataInicio)
                 .HasColumnName("data_inicio")
                 .HasColumnType("timestamp")
