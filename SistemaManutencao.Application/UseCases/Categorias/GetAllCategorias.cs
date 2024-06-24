@@ -15,9 +15,12 @@ namespace SistemaManutencao.Application.UseCases.Categorias
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<GetCategoriaDTO>> ExecuteAsync()
+        public async Task<IEnumerable<GetCategoriaDTO>> ExecuteAsync(string? nome)
         {
             var categorias = await _categoriaRepository.GetAllAsync();
+
+            if  (!string.IsNullOrEmpty(nome))
+                categorias = categorias.Where(c => c.Nome.ToUpper().Contains(nome.ToUpper()));
 
             return _mapper.Map<IEnumerable<GetCategoriaDTO>>(categorias);
         }

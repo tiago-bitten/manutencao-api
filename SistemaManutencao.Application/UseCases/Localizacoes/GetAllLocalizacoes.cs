@@ -15,9 +15,12 @@ namespace SistemaManutencao.Application.UseCases.Localizacoes
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<GetLocalizacaoDTO>> ExecuteAsync()
+        public async Task<IEnumerable<GetLocalizacaoDTO>> ExecuteAsync(string? nome)
         {
             var localizacoes = await _localizacaoRepository.GetAllAsync();
+
+            if (!string.IsNullOrEmpty(nome))
+                localizacoes = localizacoes.Where(l => l.Nome.ToUpper().Contains(nome.ToUpper()));
 
             return _mapper.Map<IEnumerable<GetLocalizacaoDTO>>(localizacoes);
         }

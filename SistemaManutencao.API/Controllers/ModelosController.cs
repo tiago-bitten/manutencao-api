@@ -41,9 +41,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? nome)
         {
-            var modelosDTO = await _getAllModelos.ExecuteAsync();
+            var modelosDTO = await _getAllModelos.ExecuteAsync(nome);
 
             return Ok(modelosDTO);
         }

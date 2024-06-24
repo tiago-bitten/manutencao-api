@@ -40,9 +40,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? nome)
         {
-            var categoriasDTO = await _getAllCategorias.ExecuteAsync();
+            var categoriasDTO = await _getAllCategorias.ExecuteAsync(nome);
 
 
             return Ok(categoriasDTO);

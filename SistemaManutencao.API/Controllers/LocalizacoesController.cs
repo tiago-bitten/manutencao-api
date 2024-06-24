@@ -43,9 +43,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? nome)
         {
-            var localizacoes = await _getAllLocalizacoes.ExecuteAsync();
+            var localizacoes = await _getAllLocalizacoes.ExecuteAsync(nome);
 
             return Ok(localizacoes);
         }

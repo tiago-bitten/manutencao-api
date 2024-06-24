@@ -1,4 +1,5 @@
-﻿using SistemaManutencao.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Infra.Data.Contexts;
 

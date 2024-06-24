@@ -15,9 +15,12 @@ namespace SistemaManutencao.Application.UseCases.Equipamentos
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<GetEquipamentoDTO>> ExecuteAsync()
+        public async Task<IEnumerable<GetEquipamentoDTO>> ExecuteAsync(string? nome)
         {
             var equipamentos = await _equipamentoRepository.GetAllAsync();
+
+            if (!string.IsNullOrEmpty(nome))
+                equipamentos = equipamentos.Where(e => e.Nome.ToUpper().Contains(nome.ToUpper()));
 
             return _mapper.Map<IEnumerable<GetEquipamentoDTO>>(equipamentos);
         }

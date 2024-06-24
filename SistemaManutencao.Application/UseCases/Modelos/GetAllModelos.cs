@@ -15,9 +15,12 @@ namespace SistemaManutencao.Application.UseCases.Modelos
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<GetModeloDTO>> ExecuteAsync()
+        public async Task<IEnumerable<GetModeloDTO>> ExecuteAsync(string? nome)
         {
             var modelos = await _modeloRepository.GetAllAsync();
+
+            if (!string.IsNullOrEmpty(nome))
+                modelos = modelos.Where(m => m.Nome.ToUpper().Contains(nome.ToUpper()));
 
             return _mapper.Map<IEnumerable<GetModeloDTO>>(modelos);
         }

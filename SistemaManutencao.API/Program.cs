@@ -46,6 +46,13 @@ app.UseHttpsRedirection();
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
 
+app.UseCors(opt =>
+{
+    opt.AllowAnyOrigin();
+    opt.AllowAnyMethod();
+    opt.AllowAnyHeader();
+});
+
 app.UseAuthorization();
 
 app.MapControllers();
