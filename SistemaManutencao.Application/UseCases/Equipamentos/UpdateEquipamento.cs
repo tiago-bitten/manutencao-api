@@ -39,6 +39,12 @@ namespace SistemaManutencao.Application.UseCases.Equipamentos
             if (!string.IsNullOrEmpty(dto.Descricao))
                 equipamento.Descricao = dto.Descricao;
 
+            if (!string.IsNullOrEmpty(dto.NumeroDeSerie))
+                equipamento.NumeroDeSerie = dto.NumeroDeSerie;
+
+            if (dto.DataAquisicao.HasValue)
+                equipamento.DataAquisicao = dto.DataAquisicao.Value;
+
             if (dto.ModeloId.HasValue)
                 equipamento.Modelo = await _modeloService.ValidarExistenciaAsync(dto.ModeloId.Value);
 

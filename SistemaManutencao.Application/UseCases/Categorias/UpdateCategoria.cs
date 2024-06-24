@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
-using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Domain.Exceptions;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 
@@ -24,7 +23,11 @@ public class UpdateCategoria
         if (categoria == null)
             throw new EntidadeNaoEncontradaException("EX10003", "Categoria");
 
-        categoria = _mapper.Map<Categoria>(dto);
+        if (!string.IsNullOrEmpty(dto.Nome))
+            categoria.Nome = dto.Nome;
+
+        if (!string.IsNullOrEmpty(dto.Descricao))
+            categoria.Descricao = dto.Descricao;
 
         _categoriaRepository.Update(categoria);
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SistemaManutencao.Domain.Entities;
+using SistemaManutencao.Domain.Exceptions;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Infra.Data.Contexts;
 
@@ -27,6 +28,24 @@ namespace SistemaManutencao.Infra.Data.Repositories
                 .Include(e => e.Modelo)
                 .Include(e => e.Localizacao)
                 .ToListAsync();
+        }
+
+        public override void Update(Equipamento entity)
+        {
+            var existingEquipamento = _context.Set<Equipamento>().Find(entity.Id);
+            if (existingEquipamento == null)
+                throw new EntidadeNaoEncontradaException("EX10008", "Equipamento");
+
+            _context.Entry(existingEquipamento).CurrentValues.SetValues(entity);
+            _context.Entry(existingEquipamento).State = EntityState.Modified;
+
+            foreach (var entry in _context.ChangeTracker.Entries()
+                                    .Where(e => e.Entity is Equipamento && e.State == EntityState.Modified))
+            {
+                var equipamento = (Equipamento)entry.Entity;
+            }
+
+            _context.SaveChanges();
         }
     }
 }

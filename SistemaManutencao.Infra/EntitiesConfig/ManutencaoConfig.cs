@@ -33,13 +33,12 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
 
             builder.Property(m => m.DataInicio)
                 .HasColumnName("data_inicio")
-                .HasColumnType("timestamp")
+                .HasColumnType("date")
                 .IsRequired();
 
             builder.Property(m => m.DataConclusao)
                 .HasColumnName("data_conclusao")
-                .HasColumnType("timestamp")
-                .IsRequired();
+                .HasColumnType("date");
 
             builder.Property(m => m.Status)
                 .HasColumnName("status")

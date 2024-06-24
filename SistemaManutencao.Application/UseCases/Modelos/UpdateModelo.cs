@@ -23,7 +23,11 @@ namespace SistemaManutencao.Application.UseCases.Modelos
         {
             var modelo = await _modeloService.ValidarExistenciaAsync(id);
 
-            modelo = _mapper.Map<Modelo>(dto);
+            if (!string.IsNullOrEmpty(dto.Nome))
+                modelo.Nome = dto.Nome;
+
+            if (!string.IsNullOrEmpty(dto.Descricao))
+                modelo.Descricao = dto.Descricao;
 
             _modeloRepository.Update(modelo);
 

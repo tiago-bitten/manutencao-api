@@ -16,7 +16,9 @@ namespace SistemaManutencao.Application.DTOs.Mappings
             
             CreateMap<UpdateLocalizacaoDTO, Localizacao>()
                 .ForMember(dest => dest.Equipamentos, opt => opt.Ignore())
-                .ForMember(dest => dest.Id, opt => opt.Ignore());
+                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.Nome, opt => opt.Condition(src => src.Nome != null))
+                .ForMember(dest => dest.Descricao, opt => opt.Condition(src => src.Descricao != null));
         }
     }
 }

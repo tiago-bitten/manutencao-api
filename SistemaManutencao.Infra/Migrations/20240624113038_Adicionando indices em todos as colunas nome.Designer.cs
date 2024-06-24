@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SistemaManutencao.Infra.Data.Contexts;
@@ -11,9 +12,11 @@ using SistemaManutencao.Infra.Data.Contexts;
 namespace SistemaManutencao.Infra.Data.Migrations
 {
     [DbContext(typeof(SistemaManutencaoDbContext))]
-    partial class SistemaManutencaoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240624113038_Adicionando indices em todos as colunas nome")]
+    partial class Adicionandoindicesemtodosascolunasnome
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -195,11 +198,11 @@ namespace SistemaManutencao.Infra.Data.Migrations
                         .HasColumnName("id");
 
                     b.Property<DateTime>("DataConclusao")
-                        .HasColumnType("date")
+                        .HasColumnType("timestamp")
                         .HasColumnName("data_conclusao");
 
                     b.Property<DateTime>("DataInicio")
-                        .HasColumnType("date")
+                        .HasColumnType("timestamp")
                         .HasColumnName("data_inicio");
 
                     b.Property<string>("Descricao")

@@ -23,6 +23,9 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("varchar(150)")
                 .IsRequired();
 
+            builder.HasIndex(e => e.Nome)
+                .HasDatabaseName("ix_especializacoes_nome");
+
             builder.Property(e => e.Descricao)
                 .HasColumnName("descricao")
                 .HasColumnType("text");
