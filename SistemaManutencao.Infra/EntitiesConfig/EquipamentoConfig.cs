@@ -50,6 +50,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("categoria_id")
                 .HasColumnType("uuid");
 
+            builder.Property(e => e.TotalManutencoes)
+                .HasColumnName("total_manutencoes")
+                .HasColumnType("int")
+                .HasDefaultValue(0);
+
             builder.HasOne(e => e.Modelo)
                 .WithMany(m => m.Equipamentos)
                 .HasForeignKey(e => e.ModeloId)

@@ -7,6 +7,7 @@
         public Guid? ModeloId { get; set; }
         public Guid? LocalizacaoId { get; set; }
         public Guid? CategoriaId { get; set; }
+        public int TotalManutencoes { get; set; }
 
         public Modelo? Modelo { get; set; }
         public Localizacao? Localizacao { get; set; }

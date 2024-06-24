@@ -12,7 +12,8 @@ namespace SistemaManutencao.Application.DTOs.Mappings
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.Modelo, opt => opt.Ignore())
                 .ForMember(dest => dest.Categoria, opt => opt.Ignore())
-                .ForMember(dest => dest.Localizacao, opt => opt.Ignore());
+                .ForMember(dest => dest.Localizacao, opt => opt.Ignore())
+                .ForMember(dest => dest.TotalManutencoes, opt => opt.Ignore());
 
             CreateMap<Equipamento, GetEquipamentoDTO>();
             
@@ -20,7 +21,8 @@ namespace SistemaManutencao.Application.DTOs.Mappings
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ForMember(dest => dest.Modelo, opt => opt.Ignore())
                 .ForMember(dest => dest.Categoria, opt => opt.Ignore())
-                .ForMember(dest => dest.Localizacao, opt => opt.Ignore());
+                .ForMember(dest => dest.Localizacao, opt => opt.Ignore())
+                .ForMember(dest => dest.TotalManutencoes, opt => opt.Ignore());
         }
     }
 }
