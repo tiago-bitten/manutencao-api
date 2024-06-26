@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "VsGkGcc0OCQ=",
+  "dgSpecHash": "xKXivDNU+qHIu9UqXWwHsRNI9rzTZc+uLrbkxH3ZY6ZkO36WlJDbwe4kLC9WeLKHs6hsB0/MPFJF6cZl0jZtIg==",
   "success": true,
-  "projectFilePath": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj",
+  "projectFilePath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiago\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\tiago\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\tiago\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.0\\fluentvalidation.aspnetcore.11.0.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.0\\fluentvalidation.dependencyinjectionextensions.11.0.0.nupkg.sha512",

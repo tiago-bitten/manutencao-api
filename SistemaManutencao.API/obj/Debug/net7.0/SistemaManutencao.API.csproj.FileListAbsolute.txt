@@ -168,3 +168,5 @@ D:\csharp\manutencao-api\SistemaManutencao.API\obj\Debug\net7.0\refint\SistemaMa
 D:\csharp\manutencao-api\SistemaManutencao.API\obj\Debug\net7.0\SistemaManutencao.API.pdb
 D:\csharp\manutencao-api\SistemaManutencao.API\obj\Debug\net7.0\SistemaManutencao.API.genruntimeconfig.cache
 D:\csharp\manutencao-api\SistemaManutencao.API\obj\Debug\net7.0\ref\SistemaManutencao.API.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\Dapper.dll
+C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\BCrypt.Net-Next.dll

@@ -3,6 +3,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Npgsql;
 using SistemaManutencao.Application.DTOs.Mappings;
 using SistemaManutencao.Application.DTOs.Validators.Modelo;
 using SistemaManutencao.Application.Services;
@@ -10,10 +11,14 @@ using SistemaManutencao.Application.UseCases.Categorias;
 using SistemaManutencao.Application.UseCases.Equipamentos;
 using SistemaManutencao.Application.UseCases.Localizacoes;
 using SistemaManutencao.Application.UseCases.Modelos;
+using SistemaManutencao.Application.UseCases.Tecnicos;
+using SistemaManutencao.Domain.Interfaces.DapperRepositories;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Domain.Interfaces.Services;
 using SistemaManutencao.Infra.Data.Contexts;
+using SistemaManutencao.Infra.Data.DapperRepositories;
 using SistemaManutencao.Infra.Data.Repositories;
+using System.Data;
 
 namespace SistemaManutencao.Infra.IoC
 {
@@ -25,10 +30,14 @@ namespace SistemaManutencao.Infra.IoC
             services.AddDbContext<SistemaManutencaoDbContext>(options =>
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<IDbConnection>(sp => 
+            new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection")));
+
             services.AddAutoMapper(typeof(CategoriaProfile));
             services.AddAutoMapper(typeof(ModeloProfile));
             services.AddAutoMapper(typeof(EquipamentoProfile));
             services.AddAutoMapper(typeof(LocalizacaoProfile));
+            services.AddAutoMapper(typeof(TecnicoProfile));
 
             return services;
         }
@@ -40,6 +49,10 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>();
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddScoped<IManutencaoRepository, ManutencaoRepository>();
+            services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+            services.AddScoped<ITecnicoRepository, TecnicoRepository>();
+
+            services.AddScoped<ITecnicoDapperRepository, TecnicoDapperRepository>();
 
             return services;
         }
@@ -80,6 +93,8 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<GetAllLocalizacoes>();
             services.AddScoped<UpdateLocalizacao>();
             services.AddScoped<DeleteLocalizacao>();
+
+            services.AddScoped<CreateTecnico>();
 
             return services;
         }
