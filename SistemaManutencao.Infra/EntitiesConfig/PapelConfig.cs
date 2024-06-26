@@ -30,10 +30,20 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("descricao")
                 .HasColumnType("text");
 
+            builder.Property(p => p.EmpresaId)
+                .HasColumnName("empresa_id")
+                .HasColumnType("uuid")
+                .IsRequired();
+
             builder.HasMany(p => p.OrdensServicos)
                 .WithOne(os => os.Papel)
                 .HasForeignKey(os => os.PapelId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(p => p.Empresa)
+                .WithMany(e => e.Papeis)
+                .HasForeignKey(p => p.EmpresaId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

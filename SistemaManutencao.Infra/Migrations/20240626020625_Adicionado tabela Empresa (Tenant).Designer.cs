@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SistemaManutencao.Infra.Data.Contexts;
@@ -11,9 +12,11 @@ using SistemaManutencao.Infra.Data.Contexts;
 namespace SistemaManutencao.Infra.Data.Migrations
 {
     [DbContext(typeof(SistemaManutencaoDbContext))]
-    partial class SistemaManutencaoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240626020625_Adicionado tabela Empresa (Tenant)")]
+    partial class AdicionadotabelaEmpresaTenant
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

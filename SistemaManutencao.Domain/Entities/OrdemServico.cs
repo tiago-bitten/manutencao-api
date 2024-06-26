@@ -10,5 +10,8 @@
 
         public Guid PapelId { get; set; }
         public Papel Papel { get; set; }
+
+        public Guid EmpresaId { get; set; }
+        public Empresa Empresa { get; set; }
     }
 }

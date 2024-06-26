@@ -7,5 +7,8 @@
 
         public Guid PecaId { get; set; }
         public Peca Peca { get; set; }
+
+        public Guid EmpresaId { get; set; }
+        public Empresa Empresa { get; set; }
     }
 }

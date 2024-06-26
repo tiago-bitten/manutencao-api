@@ -30,6 +30,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("descricao")
                 .HasColumnType("text");
 
+            builder.Property(p => p.EmpresaId)
+                .HasColumnName("empresa_id")
+                .HasColumnType("uuid")
+                .IsRequired();
+
             builder.HasMany(p => p.EquipamentoPecas)
                 .WithOne(ep => ep.Peca)
                 .HasForeignKey(ep => ep.PecaId)
@@ -39,6 +44,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithOne(pu => pu.Peca)
                 .HasForeignKey(pu => pu.PecaId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(p => p.Empresa)
+                .WithMany(e => e.Pecas)
+                .HasForeignKey(p => p.EmpresaId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

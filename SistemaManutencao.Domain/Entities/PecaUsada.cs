@@ -9,5 +9,8 @@
         public Manutencao Manutencao { get; set; }
 
         public int Quantidade { get; set; }
+
+        public Guid EmpresaId { get; set; }
+        public Empresa Empresa { get; set; }
     }
 }
