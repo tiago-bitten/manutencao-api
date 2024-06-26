@@ -51,6 +51,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IManutencaoRepository, ManutencaoRepository>();
             services.AddScoped<IEmpresaRepository, EmpresaRepository>();
             services.AddScoped<ITecnicoRepository, TecnicoRepository>();
+            services.AddScoped<IEspecializacaoRepository, EspecializacaoRepository>();
 
             services.AddScoped<ITecnicoDapperRepository, TecnicoDapperRepository>();
 
@@ -64,6 +65,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<ILocalizacaoService, LocalizacaoService>();
             services.AddScoped<IManutencaoService, ManutencaoService>();
             services.AddScoped<IEquipamentoService, EquipamentoService>();
+            services.AddScoped<IEspecializacaoService, EspecializacaoService>();
 
             return services;
         }
