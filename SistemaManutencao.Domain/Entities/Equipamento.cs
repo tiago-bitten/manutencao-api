@@ -2,6 +2,7 @@
 {
     public sealed class Equipamento : EntidadeCommon
     {
+        public int Codigo { get; set; }
         public string? NumeroDeSerie { get; set; }
         public DateTime? DataAquisicao { get; set; }
         public Guid? ModeloId { get; set; }

@@ -21,7 +21,6 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
             builder.Property(m => m.Nome)
                 .HasColumnName("nome")
                 .HasColumnType("varchar(150)")
-                .HasMaxLength(150)
                 .IsRequired();
 
             builder.HasIndex(m => m.Nome)

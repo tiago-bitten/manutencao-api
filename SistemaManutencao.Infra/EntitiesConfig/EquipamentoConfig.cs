@@ -18,6 +18,12 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .ValueGeneratedOnAdd()
                 .IsRequired();
 
+            builder.Property(e => e.Codigo)
+                .HasColumnName("codigo")
+                .HasColumnType("int")
+                .ValueGeneratedOnAdd()
+                .IsRequired();
+
             builder.Property(e => e.Nome)
                 .HasColumnName("nome")
                 .HasColumnType("varchar(150)")

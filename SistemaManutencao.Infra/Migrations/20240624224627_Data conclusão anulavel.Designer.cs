@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SistemaManutencao.Infra.Data.Contexts;
@@ -11,9 +12,11 @@ using SistemaManutencao.Infra.Data.Contexts;
 namespace SistemaManutencao.Infra.Data.Migrations
 {
     [DbContext(typeof(SistemaManutencaoDbContext))]
-    partial class SistemaManutencaoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240624224627_Data conclusão anulavel")]
+    partial class Dataconclusãoanulavel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,13 +60,6 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.Property<Guid?>("CategoriaId")
                         .HasColumnType("uuid")
                         .HasColumnName("categoria_id");
-
-                    b.Property<int>("Codigo")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("codigo");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Codigo"));
 
                     b.Property<DateTime?>("DataAquisicao")
                         .HasColumnType("date")
@@ -261,6 +257,7 @@ namespace SistemaManutencao.Infra.Data.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
+                        .HasMaxLength(150)
                         .HasColumnType("varchar(150)")
                         .HasColumnName("nome");
 
