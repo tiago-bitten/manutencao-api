@@ -56,8 +56,8 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("categoria_id")
                 .HasColumnType("uuid");
 
-            builder.Property(e => e.TotalManutencoes)
-                .HasColumnName("total_manutencoes")
+            builder.Property(e => e.TotalManutencoesConcluidas)
+                .HasColumnName("total_manutencoes_concluidas")
                 .HasColumnType("int")
                 .HasDefaultValue(0);
 

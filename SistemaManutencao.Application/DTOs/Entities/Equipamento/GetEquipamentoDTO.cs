@@ -11,6 +11,7 @@ namespace SistemaManutencao.Application.DTOs.Entities.Equipamento
         public string? Descricao { get; set; }
         public string? NumeroDeSerie { get; set; }
         public DateTime? DataAquisicao { get; set; }
+        public int TotalManutencoesConcluidas { get; set; }
         public GetCategoriaDTO? Categoria { get; set; }
         public GetModeloDTO? Modelo { get; set; }
         public GetLocalizacaoDTO? Localizacao { get; set; }
