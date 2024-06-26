@@ -142,6 +142,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithOne(t => t.Empresa)
                 .HasForeignKey(t => t.EmpresaId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(e => e.Usuarios)
+                .WithOne(u => u.Empresa)
+                .HasForeignKey(u => u.EmpresaId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

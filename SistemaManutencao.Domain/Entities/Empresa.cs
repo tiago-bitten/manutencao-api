@@ -29,5 +29,6 @@ namespace SistemaManutencao.Domain.Entities
         public IEnumerable<Papel?> Papeis { get; set; }
         public IEnumerable<PecaUsada> PecasUsadas { get; set; }
         public IEnumerable<Tecnico?> Tecnicos { get; set; }
+        public IEnumerable<Usuario?> Usuarios { get; set; } 
     }
 }

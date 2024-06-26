@@ -25,6 +25,7 @@ namespace SistemaManutencao.Infra.Data.Contexts
         public DbSet<Papel> Papeis { get; set; }
         public DbSet<Especializacao> Especializacoes { get; set; }
         public DbSet<PecaUsada> PecasUsadas { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -42,6 +43,7 @@ namespace SistemaManutencao.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new PapelConfig());
             modelBuilder.ApplyConfiguration(new EspecializacaoConfig());
             modelBuilder.ApplyConfiguration(new PecaUsadaConfig());
+            modelBuilder.ApplyConfiguration(new UsuarioConfig());
         }
     }
 }

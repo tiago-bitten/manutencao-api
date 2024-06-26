@@ -50,6 +50,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("uuid")
                 .IsRequired();
 
+            builder.Property(t => t.PossuiAcesso)
+                .HasColumnName("possui_acesso")
+                .HasColumnType("boolean")
+                .IsRequired();
+
             builder.HasMany(t => t.OrdensServicos)
                 .WithOne(os => os.Tecnico)
                 .HasForeignKey(os => os.TecnicoId)
@@ -64,6 +69,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithMany(e => e.Tecnicos)
                 .HasForeignKey(t => t.EmpresaId)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasOne(t => t.Usuario)
+                .WithOne(u => u.Tecnico)
+                .HasForeignKey<Usuario>(u => u.TecnicoId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
