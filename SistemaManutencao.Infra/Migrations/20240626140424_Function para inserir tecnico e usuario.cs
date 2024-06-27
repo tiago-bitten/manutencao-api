@@ -49,4 +49,4 @@ namespace SistemaManutencao.Infra.Data.Migrations
             ");
         }
     }
-}
+}    

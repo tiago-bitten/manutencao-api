@@ -11,23 +11,6 @@ namespace SistemaManutencao.Infra.Data.Repositories
             : base(context)
         {
         }
-
-        public async Task<int> GetNumeroEquipamentos()
-        {
-            using var transaction = _context.Database.BeginTransaction();
-
-            var sql = @"SELECT COUNT(*) FROM equipamentos";
-
-            var results = await _context.Database.ExecuteSqlRawAsync(sql);
-
-            await transaction.CommitAsync();
-
-            if (results < 0)
-                throw new Exception("Erro ao realizar consulta");
-
-            return results;
-        }
-
         public async Task<Tecnico?> CreateTecnicoComAcessoAsync(Tecnico tecnico, string email, string senhaHash)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();

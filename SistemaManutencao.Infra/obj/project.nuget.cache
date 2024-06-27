@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3KSVwM+TvIoiFtGYv6f+BHwsdDRoQqBb5LfAJJQBOlLzAsXYqWlbangBZ9jCtjJUpfXwLe4z6LIh3rHqd72l9A==",
+  "dgSpecHash": "sbLh6GEcr4O4pwwLU3sLqwKRinrWjW5vRS3KXKS6oT+r+e7Tnn1WP+tHJr3mozeFTfe1EUjFHURY65rDVvUKGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tiago\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",

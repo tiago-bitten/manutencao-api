@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Tecnicos;
 using SistemaManutencao.Application.UseCases.Tecnicos;
-using SistemaManutencao.Domain.Interfaces.Repositories;
-using SistemaManutencao.Infra.Data.Repositories;
 
 namespace SistemaManutencao.API.Controllers
 {
@@ -12,12 +9,10 @@ namespace SistemaManutencao.API.Controllers
     public class TecnicosController : ControllerBase
     {
         private readonly CreateTecnico _createTecnico;
-        private readonly ITecnicoRepository _tecnicoRepository;
 
-        public TecnicosController(CreateTecnico createTecnico, ITecnicoRepository tecnicoRepository)
+        public TecnicosController(CreateTecnico createTecnico)
         {
             _createTecnico = createTecnico;
-            _tecnicoRepository = tecnicoRepository;
         }
 
         [HttpPost("Create")]
@@ -26,14 +21,6 @@ namespace SistemaManutencao.API.Controllers
             var tecnicoDTO = await _createTecnico.ExecuteAsync(dto);
             
             return CreatedAtAction(nameof(Create), tecnicoDTO);
-        }
-
-        [HttpGet("Teste")]
-        public async Task<IActionResult> Teste()
-        {
-            var numeroEquipamentos = await _tecnicoRepository.GetNumeroEquipamentos();
-
-            return Ok(numeroEquipamentos);
         }
     }
 }

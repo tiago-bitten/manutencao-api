@@ -45,5 +45,6 @@ namespace SistemaManutencao.Infra.Data.Contexts
             modelBuilder.ApplyConfiguration(new PecaUsadaConfig());
             modelBuilder.ApplyConfiguration(new UsuarioConfig());
         }
+
     }
 }

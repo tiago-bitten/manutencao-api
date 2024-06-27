@@ -36,7 +36,7 @@ namespace SistemaManutencao.Application.UseCases.Tecnicos
             {
                 var senhaHash = BCrypt.Net.BCrypt.HashPassword(dto.Senha);
                 tecnico = await _tecnicoDapperRepository.CreateTecnicoComAcessoAsync(tecnico, dto.Email, senhaHash);
-               //tecnico = await _tecnicoRepository.CreateTecnicoComAcessoAsync(tecnico, dto.Email, senhaHash);
+                //tecnico = await _tecnicoRepository.CreateTecnicoComAcessoAsync(tecnico, dto.Email, senhaHash);
             }
             else
             {
