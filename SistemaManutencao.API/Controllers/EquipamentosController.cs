@@ -28,6 +28,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var equipamentoDTO = await _createEquipamento.ExecuteAsync(dto);
 
+            HttpContext.Items["MensagemAPI"] = "Equipamento criado com sucesso";
+
             return CreatedAtAction(nameof(GetById), new { id = equipamentoDTO.Id }, equipamentoDTO);
         }
 
@@ -35,6 +37,8 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> GetById(Guid id)
         {
             var equipamentoDTO = await _getEquipamentoById.ExecuteAsync(id);
+
+            HttpContext.Items["MensagemAPI"] = "Equipamento retornado com sucesso";
 
             return Ok(equipamentoDTO);
         }
@@ -44,6 +48,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var equipamentosDTO = await _getAllEquipamentos.ExecuteAsync(nome);
 
+            HttpContext.Items["MensagemAPI"] = "Equipamentos retornados com sucesso";
+
             return Ok(equipamentosDTO);
         }
 
@@ -51,6 +57,8 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateEquipamentoDTO dto)
         {
             var equipamentoDTO = await _updateEquipamento.ExecuteAsync(id, dto);
+
+            HttpContext.Items["MensagemAPI"] = "Equipamento atualizado com sucesso";
 
             return Ok(equipamentoDTO);
         }
@@ -60,7 +68,9 @@ namespace SistemaManutencao.API.Controllers
         {
             await _deleteEquipamento.ExecuteAsync(id);
 
-            return NoContent();
+            HttpContext.Items["MensagemAPI"] = "Equipamento deletado com sucesso";
+
+            return Ok();
         }
     }
 }

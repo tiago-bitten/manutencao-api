@@ -1,6 +1,6 @@
 ﻿namespace SistemaManutencao.Domain.Entities
 {
-    public sealed class OrdemServico
+    public sealed class OrdemServico : Tenant
     {
         public Guid ManutencaoId { get; set; }
         public Manutencao Manutencao { get; set; }
@@ -10,8 +10,5 @@
 
         public Guid PapelId { get; set; }
         public Papel Papel { get; set; }
-
-        public Guid EmpresaId { get; set; }
-        public Empresa Empresa { get; set; }
     }
 }

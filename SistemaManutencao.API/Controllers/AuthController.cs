@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SistemaManutencao.Application.DTOs.Entities.Usuarios;
+using SistemaManutencao.Application.DTOs.Entities.Auth;
 using SistemaManutencao.Application.UseCases.Auth;
 
 namespace SistemaManutencao.API.Controllers
@@ -16,9 +16,11 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login(LoginDTO dto)
+        public async Task<IActionResult> Login([FromBody] LoginDTO dto)
         {
             var token = await _login.ExecuteAsync(dto);
+
+            HttpContext.Items["MensagemAPI"] = "Login realizado com sucesso";
 
             return Ok(token);
         }

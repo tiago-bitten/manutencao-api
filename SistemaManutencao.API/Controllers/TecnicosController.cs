@@ -19,6 +19,8 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> Create(CreateTecnicoDTO dto)
         {
             var tecnicoDTO = await _createTecnico.ExecuteAsync(dto);
+
+            HttpContext.Items["MensagemAPI"] = "Técnico criado com sucesso";
             
             return CreatedAtAction(nameof(Create), tecnicoDTO);
         }

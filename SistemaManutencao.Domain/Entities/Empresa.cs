@@ -15,6 +15,8 @@ namespace SistemaManutencao.Domain.Entities
         public string? Estado { get; set; }
         public string? Cep { get; set; }
         public bool? Ativo { get; set; }
+        public Guid ProprietarioId { get; set; }
+        public Proprietario Proprietario { get; set; }
 
         public IEnumerable<Categoria?> Categorias { get; set; }
         public IEnumerable<Equipamento?> Equipamentos { get; set; }

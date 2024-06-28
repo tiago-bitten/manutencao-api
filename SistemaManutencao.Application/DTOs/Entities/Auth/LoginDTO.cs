@@ -1,4 +1,4 @@
-﻿namespace SistemaManutencao.Application.DTOs.Entities.Usuarios
+﻿namespace SistemaManutencao.Application.DTOs.Entities.Auth
 {
     public class LoginDTO
     {

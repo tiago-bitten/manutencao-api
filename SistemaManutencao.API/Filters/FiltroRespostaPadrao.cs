@@ -14,12 +14,14 @@ namespace SistemaManutencao.API.Filters
         {
             if (context.Result is ObjectResult objectResult)
             {
+                var mensagem = context.HttpContext.Items["MensagemAPI"]?.ToString();
+
                 var apiResponse = new RespostaBaseApi<object>
                 {
                     Sucesso = objectResult.StatusCode >= 200 && objectResult.StatusCode < 300,
                     Conteudo = objectResult.StatusCode >= 200 && objectResult.StatusCode < 300 ? objectResult.Value : null,
                     Erros = objectResult.StatusCode >= 400 ? new List<string> { objectResult.Value?.ToString() } : null,
-                    Mensagem = objectResult.StatusCode >= 400 ? "Erro geral" : null,
+                    Mensagem = objectResult.StatusCode >= 400 ? "Erro geral" : mensagem,
                     Total = objectResult.StatusCode >= 200 && objectResult.StatusCode < 300 && objectResult.Value is IEnumerable<object> enumerable ? enumerable.Count() : (int?)null
                 };
 

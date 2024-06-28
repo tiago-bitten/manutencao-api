@@ -29,6 +29,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var modeloDTO = await _createModelo.ExecuteAsync(dto);
 
+            HttpContext.Items["MensagemAPI"] = "Modelo criado com sucesso";
+
             return CreatedAtAction(nameof(GetById), new { id = modeloDTO.Id }, modeloDTO);
         }
 
@@ -36,6 +38,11 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> GetById(Guid id)
         {
             var modeloDTO = await _getModeloById.ExecuteAsync(id);
+
+            if (modeloDTO == null)
+                return NotFound();
+
+            HttpContext.Items["MensagemAPI"] = "Modelo retornado com sucesso";
 
             return Ok(modeloDTO);
         }
@@ -45,6 +52,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var modelosDTO = await _getAllModelos.ExecuteAsync(nome);
 
+            HttpContext.Items["MensagemAPI"] = "Modelos retornados com sucesso";
+
             return Ok(modelosDTO);
         }
 
@@ -52,6 +61,8 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateModeloDTO dto)
         {
             var modeloDTO = await _updateModelo.ExecuteAsync(id, dto);
+
+            HttpContext.Items["MensagemAPI"] = "Modelo atualizado com sucesso";
 
             return Ok(modeloDTO);
         }
@@ -61,7 +72,9 @@ namespace SistemaManutencao.API.Controllers
         {
             await _deleteModelo.ExecuteAsync(id);
 
-            return NoContent();
+            HttpContext.Items["MensagemAPI"] = "Modelo deletado com sucesso";
+
+            return Ok();
         }
     }
 }

@@ -67,6 +67,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("boolean")
                 .HasDefaultValue(true);
 
+            builder.Property(e => e.ProprietarioId)
+                .HasColumnName("proprietario_id")
+                .HasColumnType("uuid")
+                .IsRequired();
+
             builder.HasIndex(e => e.CpfCnpj)
                 .IsUnique()
                 .HasDatabaseName("ix_empresas_cpf_cnpj");
@@ -77,6 +82,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
 
             builder.HasIndex(e => e.Nome)
                 .HasDatabaseName("ix_empresas_nome");
+
+            builder.HasOne(e => e.Proprietario)
+                .WithOne(p => p.Empresa)
+                .HasForeignKey<Empresa>(e => e.ProprietarioId)
+                .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(e => e.Categorias)
                 .WithOne(c => c.Empresa)

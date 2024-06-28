@@ -1,10 +1,7 @@
 ﻿namespace SistemaManutencao.Domain.Entities
 {
-    public abstract class EntidadeBase
+    public abstract class EntidadeBase : Tenant
     {
         public Guid Id { get; set; }
-        public Guid EmpresaId { get; set; }
-
-        public Empresa Empresa { get; set; }
     }
 }

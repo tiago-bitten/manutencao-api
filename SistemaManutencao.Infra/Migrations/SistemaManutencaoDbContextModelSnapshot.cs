@@ -97,6 +97,10 @@ namespace SistemaManutencao.Infra.Data.Migrations
                         .HasColumnType("varchar(150)")
                         .HasColumnName("nome");
 
+                    b.Property<Guid>("ProprietarioId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("proprietario_id");
+
                     b.Property<string>("Telefone")
                         .HasColumnType("varchar(20)")
                         .HasColumnName("telefone");
@@ -118,6 +122,9 @@ namespace SistemaManutencao.Infra.Data.Migrations
 
                     b.HasIndex("Nome")
                         .HasDatabaseName("ix_empresas_nome");
+
+                    b.HasIndex("ProprietarioId")
+                        .IsUnique();
 
                     b.ToTable("empresas", (string)null);
                 });
@@ -505,6 +512,45 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.ToTable("pecas_usadas", (string)null);
                 });
 
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Proprietario", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("UUID")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Cpf")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(11)")
+                        .HasColumnName("cpf");
+
+                    b.Property<DateTime>("DataNascimento")
+                        .HasColumnType("DATE")
+                        .HasColumnName("data_nascimento");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(150)")
+                        .HasColumnName("email");
+
+                    b.Property<Guid>("EmpresaId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(150)")
+                        .HasColumnName("nome");
+
+                    b.Property<string>("Telefone")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(11)")
+                        .HasColumnName("telefone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("proprietarios", (string)null);
+                });
+
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Tecnico", b =>
                 {
                     b.Property<Guid>("Id")
@@ -606,6 +652,17 @@ namespace SistemaManutencao.Infra.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Empresa");
+                });
+
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Empresa", b =>
+                {
+                    b.HasOne("SistemaManutencao.Domain.Entities.Proprietario", "Proprietario")
+                        .WithOne("Empresa")
+                        .HasForeignKey("SistemaManutencao.Domain.Entities.Empresa", "ProprietarioId")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .IsRequired();
+
+                    b.Navigation("Proprietario");
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Equipamento", b =>
@@ -925,6 +982,12 @@ namespace SistemaManutencao.Infra.Data.Migrations
                     b.Navigation("EquipamentoPecas");
 
                     b.Navigation("PecasUsadas");
+                });
+
+            modelBuilder.Entity("SistemaManutencao.Domain.Entities.Proprietario", b =>
+                {
+                    b.Navigation("Empresa")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SistemaManutencao.Domain.Entities.Tecnico", b =>

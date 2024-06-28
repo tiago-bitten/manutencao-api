@@ -28,6 +28,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var localizacao = await _createLocalizacao.ExecuteAsync(dto);
 
+            HttpContext.Items["MensagemAPI"] = "Localização criada com sucesso";
+
             return CreatedAtAction(nameof(GetById), new { id = localizacao.Id }, localizacao);
         }
 
@@ -39,6 +41,8 @@ namespace SistemaManutencao.API.Controllers
             if (localizacao == null)
                 return NotFound();
 
+            HttpContext.Items["MensagemAPI"] = "Localização retornada com sucesso";
+
             return Ok(localizacao);
         }
 
@@ -46,6 +50,8 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> GetAll([FromQuery] string? nome)
         {
             var localizacoes = await _getAllLocalizacoes.ExecuteAsync(nome);
+
+            HttpContext.Items["MensagemAPI"] = "Localizações retornadas com sucesso";
 
             return Ok(localizacoes);
         }
@@ -55,6 +61,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var localizacao = await _updateLocalizacao.ExecuteAsync(id, dto);
 
+            HttpContext.Items["MensagemAPI"] = "Localização atualizada com sucesso";
+
             return Ok(localizacao);
         }
 
@@ -63,7 +71,9 @@ namespace SistemaManutencao.API.Controllers
         {
             await _deleteLocalizacao.ExecuteAsync(id);
 
-            return NoContent();
+            HttpContext.Items["MensagemAPI"] = "Localização deletada com sucesso";
+
+            return Ok();
         }
     }
 }

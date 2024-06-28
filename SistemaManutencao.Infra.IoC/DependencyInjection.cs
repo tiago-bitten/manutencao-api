@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
-using SistemaManutencao.Application.DTOs.Entities.Usuarios;
 using SistemaManutencao.Application.DTOs.Mappings;
 using SistemaManutencao.Application.DTOs.Validators.Modelo;
 using SistemaManutencao.Application.Services;
+using SistemaManutencao.Application.UseCases.Auth;
 using SistemaManutencao.Application.UseCases.Categorias;
 using SistemaManutencao.Application.UseCases.Equipamentos;
 using SistemaManutencao.Application.UseCases.Localizacoes;
@@ -101,7 +101,7 @@ namespace SistemaManutencao.Infra.IoC
 
             services.AddScoped<CreateTecnico>();
 
-            services.AddScoped<LoginDTO>();
+            services.AddScoped<Login>();
 
             return services;
         }

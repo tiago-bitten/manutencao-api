@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
 using SistemaManutencao.Application.UseCases.Categorias;
 
@@ -6,6 +7,7 @@ namespace SistemaManutencao.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class CategoriasController : ControllerBase
     {
         private readonly CreateCategoria _createCategoria;
@@ -28,6 +30,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var categoriaDTO = await _createCategoria.ExecuteAsync(dto);
 
+            HttpContext.Items["MensagemAPI"] = "Categoria criada com sucesso";
+
             return CreatedAtAction(nameof(GetById), new { id = categoriaDTO.Id }, categoriaDTO);
         }
 
@@ -35,6 +39,8 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> GetById(Guid id)
         {
             var categoriaDTO = await _getCategoriaById.ExecuteAsync(id);
+
+            HttpContext.Items["MensagemAPI"] = "Categoria retornada com sucesso";
 
             return Ok(categoriaDTO);
         }
@@ -44,6 +50,7 @@ namespace SistemaManutencao.API.Controllers
         {
             var categoriasDTO = await _getAllCategorias.ExecuteAsync(nome);
 
+            HttpContext.Items["MensagemAPI"] = "Categorias retornadas com sucesso";
 
             return Ok(categoriasDTO);
         }
@@ -52,6 +59,8 @@ namespace SistemaManutencao.API.Controllers
         public async Task<IActionResult> Update(Guid id, [FromBody] UpdateCategoriaDTO dto)
         {
             var categoriaDTO = await _updateCategoria.ExecuteAsync(id, dto);
+
+            HttpContext.Items["MensagemAPI"] = "Categoria atualizada com sucesso";
             
             return Ok(categoriaDTO);
         }
@@ -61,7 +70,9 @@ namespace SistemaManutencao.API.Controllers
         {
             await _deleteCategoria.ExecuteAsync(id);
 
-            return NoContent();
+            HttpContext.Items["MensagemAPI"] = "Categoria deletada com sucesso";
+
+            return Ok();
         }
     }
 }
