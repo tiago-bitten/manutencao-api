@@ -178,3 +178,13 @@ C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.A
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\tiago\Documents\CSHARP\p-projetos\SistemaManutencao\SistemaManutencao.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\BCrypt.Net-Next.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Dapper.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

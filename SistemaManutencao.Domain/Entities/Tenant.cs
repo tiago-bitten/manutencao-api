@@ -2,7 +2,7 @@
 {
     public abstract class Tenant
     {
-        public Guid EmpresaId { get; private set; }
-        public Empresa Empresa { get; private set; }
+        public Guid EmpresaId { get; set; }
+        public Empresa Empresa { get; set; }
     }
 }

@@ -9,6 +9,7 @@ using SistemaManutencao.Application.DTOs.Validators.Modelo;
 using SistemaManutencao.Application.Services;
 using SistemaManutencao.Application.UseCases.Auth;
 using SistemaManutencao.Application.UseCases.Categorias;
+using SistemaManutencao.Application.UseCases.Empresas;
 using SistemaManutencao.Application.UseCases.Equipamentos;
 using SistemaManutencao.Application.UseCases.Localizacoes;
 using SistemaManutencao.Application.UseCases.Modelos;
@@ -39,6 +40,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddAutoMapper(typeof(EquipamentoProfile));
             services.AddAutoMapper(typeof(LocalizacaoProfile));
             services.AddAutoMapper(typeof(TecnicoProfile));
+            services.AddAutoMapper(typeof(EmpresaProfile));
 
             return services;
         }
@@ -68,6 +70,8 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IManutencaoService, ManutencaoService>();
             services.AddScoped<IEquipamentoService, EquipamentoService>();
             services.AddScoped<IEspecializacaoService, EspecializacaoService>();
+            services.AddScoped<IUsuarioService, UsuarioService>();
+
             services.AddScoped<IAuthService, JwtTokenService>();
 
             return services;
@@ -100,6 +104,8 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<DeleteLocalizacao>();
 
             services.AddScoped<CreateTecnico>();
+
+            services.AddScoped<CreateEmpresa>();
 
             services.AddScoped<Login>();
 

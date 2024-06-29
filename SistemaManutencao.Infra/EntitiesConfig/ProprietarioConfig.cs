@@ -43,10 +43,12 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("VARCHAR(11)")
                 .IsRequired();
 
-            builder.HasOne(p => p.Empresa)
+            builder.HasMany(p => p.Empresa)
+
+            /*builder.HasOne(p => p.Empresa)
                 .WithOne(e => e.Proprietario)
                 .HasForeignKey<Empresa>(e => e.ProprietarioId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.SetNull);*/
         }
     }
 }

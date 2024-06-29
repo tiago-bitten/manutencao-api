@@ -6,6 +6,7 @@ namespace SistemaManutencao.Domain.Interfaces.Services
     {
         string GenerateTokenAsync(Usuario usuario);
         bool ValidateToken(string token);
+        string ResolveToken(string token);
         Guid GetUserId(string token);
         Guid GetEmpresaId(string token);
     }
