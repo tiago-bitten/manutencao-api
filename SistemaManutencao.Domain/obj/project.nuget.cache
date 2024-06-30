@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Whssr+M1zSU=",
+  "dgSpecHash": "Pvprlk3wxl7QX2OSfH+JmCAeG3gLO95phBfrE5iuMnX83aC40ttq2sG+UQcxgserc3ffM0IkHTgvfxbicP2Z2g==",
   "success": true,
-  "projectFilePath": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj",
+  "projectFilePath": "C:\\Users\\teste\\Documents\\CSHARP\\projetos\\manutencao-api\\SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

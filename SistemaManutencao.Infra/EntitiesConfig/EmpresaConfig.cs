@@ -84,8 +84,8 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasDatabaseName("ix_empresas_nome");
 
             builder.HasOne(e => e.Proprietario)
-                .WithOne(p => p.Empresa)
-                .HasForeignKey<Empresa>(e => e.ProprietarioId)
+                .WithMany(p => p.Empresas)
+                .HasForeignKey(e => e.ProprietarioId)
                 .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(e => e.Categorias)

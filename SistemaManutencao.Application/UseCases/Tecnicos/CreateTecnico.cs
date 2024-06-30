@@ -35,7 +35,7 @@ namespace SistemaManutencao.Application.UseCases.Tecnicos
             if (dto.PossuiAcesso.HasValue && dto.PossuiAcesso.Equals(true))
             {
                 var senhaHash = BCrypt.Net.BCrypt.HashPassword(dto.Senha);
-                //tecnico.EmpresaId = Guid.Parse("9facb198-46c8-46fc-9fc7-f6f75242f9ae");
+                tecnico.EmpresaId = Guid.Parse("3a9485f7-33cf-4558-a511-b457b07e8aac");
                 tecnico = await _tecnicoDapperRepository.CreateTecnicoComAcessoAsync(tecnico, dto.Email, senhaHash);
                 //tecnico = await _tecnicoRepository.CreateTecnicoComAcessoAsync(tecnico, dto.Email, senhaHash);
             }
