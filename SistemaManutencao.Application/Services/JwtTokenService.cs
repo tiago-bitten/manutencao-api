@@ -34,7 +34,7 @@ namespace SistemaManutencao.Application.Services
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                    new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
+                    new Claim("UserId", usuario.Id.ToString()),
                     new Claim(ClaimTypes.Email, usuario.Email),
                     new Claim("TenantId", usuario.EmpresaId.ToString())
                 }),
@@ -51,8 +51,7 @@ namespace SistemaManutencao.Application.Services
         public Guid GetEmpresaId(string authHeader)
         {
             var token = ResolveToken(authHeader);
-            var handler = new JwtSecurityTokenHandler();
-            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
+            var jsonToken = GetJsonToken(token);
             var tenantId = jsonToken?.Claims.First(claim => claim.Type == "TenantId").Value;
 
             return Guid.Parse(tenantId);
@@ -61,15 +60,11 @@ namespace SistemaManutencao.Application.Services
         public Guid GetUserId(string authHeader)
         {
             var token = ResolveToken(authHeader);
-            var handler = new JwtSecurityTokenHandler();
-            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
-            //var userId = jsonToken?.Claims.First(claim => claim.Type == ClaimTypes.NameIdentifier).Value;
-            List<Claim?> claims = jsonToken?.Claims.ToList();
-
-            var userId = claims?[0].Value;
+            var jsonToken = GetJsonToken(token);
+            var userId = jsonToken?.Claims.First(claim => claim.Type == "UserId").Value;
 
             if (userId == null)
-                throw new SecurityTokenException($"Token inválido, lista de claims: {ListClaims(authHeader)}");
+                throw new SecurityTokenException("Token inválido");
 
             return Guid.Parse(userId);
         }
@@ -108,17 +103,10 @@ namespace SistemaManutencao.Application.Services
             }
         }
 
-        public string ListClaims(string authHeader)
+        private JwtSecurityToken GetJsonToken(string token)
         {
-            var token = ResolveToken(authHeader);
             var handler = new JwtSecurityTokenHandler();
-            var jsonToken = handler.ReadToken(token) as JwtSecurityToken;
-
-            if (jsonToken == null)
-                return "Token inválido";
-
-            var claims = jsonToken.Claims.Select(c => $"{c.Type}: {c.Value}");
-            return string.Join(", ", claims);
+            return handler.ReadToken(token) as JwtSecurityToken;
         }
     }
 }

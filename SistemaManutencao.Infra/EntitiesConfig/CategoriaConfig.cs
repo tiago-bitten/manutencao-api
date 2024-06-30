@@ -24,9 +24,6 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasMaxLength(150)
                 .IsRequired();
 
-            builder.HasIndex(c => c.Nome)
-                .HasDatabaseName("ix_categorias_nome");
-
             builder.Property(c => c.Descricao)
                 .HasColumnName("descricao")
                 .HasColumnType("text");
@@ -35,6 +32,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("empresa_id")
                 .HasColumnType("uuid")
                 .IsRequired();
+
+            builder.Property(c => c.Ativo)
+                .HasColumnName("ativo")
+                .HasColumnType("boolean")
+                .HasDefaultValue(true);
 
             builder.HasMany(c => c.Equipamentos)
                 .WithOne(e => e.Categoria)
@@ -45,6 +47,9 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithMany(e => e.Categorias)
                 .HasForeignKey(c => c.EmpresaId)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasIndex(c => c.Nome)
+                .HasDatabaseName("ix_categorias_nome");
         }
     }
 }

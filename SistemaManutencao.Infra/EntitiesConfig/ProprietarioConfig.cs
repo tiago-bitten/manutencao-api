@@ -43,6 +43,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("VARCHAR(11)")
                 .IsRequired();
 
+            builder.Property(p => p.Ativo)
+                .HasColumnName("ativo")
+                .HasColumnType("BOOLEAN")
+                .HasDefaultValue(true);
+
             builder.HasMany(p => p.Empresas)
                 .WithOne(e => e.Proprietario)
                 .HasForeignKey(e => e.ProprietarioId)

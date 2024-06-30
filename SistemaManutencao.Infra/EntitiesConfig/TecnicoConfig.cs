@@ -23,9 +23,6 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("varchar(150)")
                 .IsRequired();
 
-            builder.HasIndex(t => t.Nome)
-                .HasDatabaseName("ix_tecnicos_nome");
-
             builder.Property(t => t.Telefone)
                 .HasColumnName("telefone")
                 .HasColumnType("varchar(15)")
@@ -55,6 +52,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("boolean")
                 .IsRequired();
 
+            builder.Property(t => t.Ativo)
+                .HasColumnName("ativo")
+                .HasColumnType("boolean")
+                .HasDefaultValue(true);
+
             builder.HasMany(t => t.OrdensServicos)
                 .WithOne(os => os.Tecnico)
                 .HasForeignKey(os => os.TecnicoId)
@@ -74,6 +76,9 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithOne(u => u.Tecnico)
                 .HasForeignKey<Usuario>(u => u.TecnicoId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasIndex(t => t.Nome)
+                .HasDatabaseName("ix_tecnicos_nome");
         }
     }
 }

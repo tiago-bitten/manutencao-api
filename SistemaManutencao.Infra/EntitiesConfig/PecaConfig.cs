@@ -23,9 +23,6 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("varchar(150)")
                 .IsRequired();
 
-            builder.HasIndex(p => p.Nome)
-                .HasDatabaseName("ix_pecas_nome");
-
             builder.Property(p => p.Descricao)
                 .HasColumnName("descricao")
                 .HasColumnType("text");
@@ -34,6 +31,11 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnName("empresa_id")
                 .HasColumnType("uuid")
                 .IsRequired();
+
+            builder.Property(p => p.Ativo)
+                .HasColumnName("ativo")
+                .HasColumnType("boolean")
+                .HasDefaultValue(true);
 
             builder.HasMany(p => p.EquipamentoPecas)
                 .WithOne(ep => ep.Peca)
@@ -49,6 +51,9 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .WithMany(e => e.Pecas)
                 .HasForeignKey(p => p.EmpresaId)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            builder.HasIndex(p => p.Nome)
+                .HasDatabaseName("ix_pecas_nome");
         }
     }
 }
