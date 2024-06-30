@@ -33,6 +33,8 @@ namespace SistemaManutencao.API.Controllers
         {
             var proprietariosDTO = await _getAllProprietarios.ExecuteAsync();
 
+            HttpContext.Items["MensagemAPI"] = "Proprietários retornados com sucesso";
+
             return Ok(proprietariosDTO);
         }
     }

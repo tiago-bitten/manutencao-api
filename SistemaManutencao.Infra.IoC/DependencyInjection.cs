@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,8 +19,10 @@ using SistemaManutencao.Application.UseCases.Tecnicos;
 using SistemaManutencao.Domain.Interfaces.DapperRepositories;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Domain.Interfaces.Services;
+using SistemaManutencao.Infra.Data.Constants;
 using SistemaManutencao.Infra.Data.Contexts;
 using SistemaManutencao.Infra.Data.DapperRepositories;
+using SistemaManutencao.Infra.Data.PolicyRequirements;
 using SistemaManutencao.Infra.Data.Repositories;
 using System.Data;
 
@@ -77,6 +80,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IEspecializacaoService, EspecializacaoService>();
             services.AddScoped<IUsuarioService, UsuarioService>();
             services.AddScoped<IProprietarioService, ProprietarioService>();
+            services.AddScoped<IEmpresaService, EmpresaService>();
 
             services.AddScoped<IAuthService, JwtTokenService>();
 
@@ -118,6 +122,19 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<GetAllProprietarios>();
 
             services.AddScoped<Login>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddAuthorizationPolicies(this IServiceCollection services)
+        {
+            services.AddSingleton<IAuthorizationHandler, UsuarioAtivoHandler>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(Policies.UsuarioAtivo, policy =>
+                    policy.Requirements.Add(new UsuarioAtivoRequirement()));
+            });
 
             return services;
         }

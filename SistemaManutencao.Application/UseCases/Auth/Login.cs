@@ -26,10 +26,13 @@ namespace SistemaManutencao.Application.UseCases.Auth
             if (usuario == null)
                 throw new EntidadeNaoEncontradaException("EX10009", "Usuario");
 
+            if  (!usuario.Ativo.HasValue || !usuario.Ativo.Value)
+                throw new RegraNegocioException("EX10013", "Usuario está inativo, contate um administrador");
+
             bool senhaValida = BCrypt.Net.BCrypt.Verify(dto.Senha, usuario.SenhaHash);
 
             if (!senhaValida)
-                throw new Exception("Senha inválida");
+                throw new RegraNegocioException("EX10014", "Senha inválida");
 
             return new TokenDTO()
             {

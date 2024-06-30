@@ -35,6 +35,7 @@ namespace SistemaManutencao.Application.Services
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("UserId", usuario.Id.ToString()),
+                    new Claim("Ativo", usuario.Ativo.ToString()),
                     new Claim(ClaimTypes.Email, usuario.Email),
                     new Claim("TenantId", usuario.EmpresaId.ToString())
                 }),

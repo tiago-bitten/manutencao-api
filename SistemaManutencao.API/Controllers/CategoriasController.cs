@@ -2,12 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
 using SistemaManutencao.Application.UseCases.Categorias;
+using SistemaManutencao.Infra.Data.Constants;
 
 namespace SistemaManutencao.API.Controllers
 {
+    [Authorize(Policy = Policies.UsuarioAtivo)]
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize]
     public class CategoriasController : ControllerBase
     {
         private readonly CreateCategoria _createCategoria;
@@ -26,9 +27,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreateCategoriaDTO dto)
+        public async Task<IActionResult> Create([FromBody] CreateCategoriaDTO dto, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var categoriaDTO = await _createCategoria.ExecuteAsync(dto);
+            var categoriaDTO = await _createCategoria.ExecuteAsync(dto, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Categoria criada com sucesso";
 

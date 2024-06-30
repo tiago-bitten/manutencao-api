@@ -15,9 +15,7 @@ namespace SistemaManutencao.Infra.Data.Repositories
         {
             return await _context.Set<Usuario>()
                 .FirstOrDefaultAsync(u => 
-                    u.Email.ToUpper().Equals(email.ToUpper()) && 
-                    u.Ativo.Equals(true)
-                 );
+                    u.Email.ToUpper().Equals(email.ToUpper()));
         }
     }
 }
