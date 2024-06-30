@@ -12,13 +12,15 @@ namespace SistemaManutencao.Application.UseCases.Empresas
         private readonly IEmpresaRepository _empresaRepository;
         private readonly IUsuarioService _usuarioService;
         private readonly IAuthService _authService;
+        private readonly IProprietarioService _proprietarioService;
         private readonly IMapper _mapper;
 
-        public CreateEmpresa(IEmpresaRepository empresaRepository, IUsuarioService usuarioService, IAuthService authService, IMapper mapper)
+        public CreateEmpresa(IEmpresaRepository empresaRepository, IUsuarioService usuarioService, IAuthService authService, IProprietarioService proprietarioService, IMapper mapper)
         {
             _empresaRepository = empresaRepository;
             _usuarioService = usuarioService;
             _authService = authService;
+            _proprietarioService = proprietarioService;
             _mapper = mapper;
         }
 
@@ -30,7 +32,11 @@ namespace SistemaManutencao.Application.UseCases.Empresas
             if (!usuario.TipoUsuario.Equals(ETipoUsuario.Funcionario))
                 throw new Exception("Usuário não tem permissão para criar empresa");
 
+            var proprietario = await _proprietarioService.ValidarExistenciaAsync(dto.ProprietarioId);
+
             var empresa = _mapper.Map<Empresa>(dto);
+
+            empresa.Proprietario = proprietario;
 
             await _empresaRepository.AddAsync(empresa);
 

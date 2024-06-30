@@ -5,7 +5,7 @@
         public string Codigo { get; }
 
         public BaseException(string codigo, string message) 
-            : base($"{codigo}:=: {message} não encontrada")
+            : base($"{codigo}:=:{message}")
         {
             Codigo = codigo;
         }

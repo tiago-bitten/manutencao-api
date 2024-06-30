@@ -32,7 +32,7 @@ namespace SistemaManutencao.Application.DTOs.Validators.Empresas
 
             RuleFor(x => x.Cidade)
                 .NotEmpty().WithMessage("A cidade é obrigatória")
-                .Length(2, 100).WithMessage("A cidade deve ter entre 2 e 100 caracteres");
+                .Length(2, 150).WithMessage("A cidade deve ter entre 2 e 150 caracteres");
 
             RuleFor(x => x.Estado)
                 .NotEmpty().WithMessage("O estado é obrigatório")

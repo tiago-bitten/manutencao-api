@@ -13,6 +13,8 @@ namespace SistemaManutencao.Application.DTOs.Mappings
                 .ForMember(dest => dest.Proprietario, opts => opts.Ignore());
 
             CreateMap<Empresa, GetEmpresaDTO>();
+
+            CreateMap<Empresa, GetSimpEmpresaDTO>();
         }
     }
 }

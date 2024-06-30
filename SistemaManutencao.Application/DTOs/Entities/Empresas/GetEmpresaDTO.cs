@@ -1,4 +1,5 @@
-﻿using SistemaManutencao.Domain.Enums;
+﻿using SistemaManutencao.Application.DTOs.Entities.Proprietarios;
+using SistemaManutencao.Domain.Enums;
 
 namespace SistemaManutencao.Application.DTOs.Entities.Empresas
 {
@@ -14,6 +15,7 @@ namespace SistemaManutencao.Application.DTOs.Entities.Empresas
         public string Cidade { get; set; }
         public string Estado { get; set; }
         public string Cep { get; set; }
-        public Guid ProprietarioId { get; set; }
+        public bool Ativo { get; set; }
+        public GetSimpProprietarioDTO Proprietario { get; set; }
     }
 }

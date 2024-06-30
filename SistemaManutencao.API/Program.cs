@@ -4,8 +4,12 @@ using Microsoft.IdentityModel.Tokens;
 using SistemaManutencao.API.Filters;
 using SistemaManutencao.API.Middlewares;
 using SistemaManutencao.Application.DTOs.Validators.Categorias;
+using SistemaManutencao.Application.DTOs.Validators.Empresas;
 using SistemaManutencao.Application.DTOs.Validators.Equipamentos;
+using SistemaManutencao.Application.DTOs.Validators.Localizacoes;
 using SistemaManutencao.Application.DTOs.Validators.Modelo;
+using SistemaManutencao.Application.DTOs.Validators.Modelos;
+using SistemaManutencao.Application.DTOs.Validators.Proprietarios;
 using SistemaManutencao.Infra.IoC;
 using System.Text;
 
@@ -22,9 +26,21 @@ builder.Services.AddControllers(opt =>
 })
 .AddFluentValidation(fv =>
 {
-    fv.RegisterValidatorsFromAssemblyContaining<CreateModeloDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<CreateCategoriaDTOValidator>();
     fv.RegisterValidatorsFromAssemblyContaining<UpdateCategoriaDTOValidator>();
+
+    fv.RegisterValidatorsFromAssemblyContaining<CreateEmpresaDTOValidator>();
+    
     fv.RegisterValidatorsFromAssemblyContaining<CreateEquipamentoDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<UpdateEquipamentoDTOValidator>();
+
+    fv.RegisterValidatorsFromAssemblyContaining<CreateLocalizacaoDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<UpdateLocalizacaoDTOValidator>();
+
+    fv.RegisterValidatorsFromAssemblyContaining<CreateModeloDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<UpdateModeloDTOValidator>();
+
+    fv.RegisterValidatorsFromAssemblyContaining<CreateProprietarioDTOValidator>();
 });
 
 // Jwt settings

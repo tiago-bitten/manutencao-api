@@ -11,10 +11,12 @@ namespace SistemaManutencao.API.Controllers
     public class EmpresasController : ControllerBase
     {
         private readonly CreateEmpresa _createEmpresa;
+        private readonly GetAllEmpresas _getAllEmpresas;
 
-        public EmpresasController(CreateEmpresa createEmpresa)
+        public EmpresasController(CreateEmpresa createEmpresa, GetAllEmpresas getAllEmpresas)
         {
             _createEmpresa = createEmpresa;
+            _getAllEmpresas = getAllEmpresas;
         }
 
         [HttpPost("Create")]
@@ -25,6 +27,14 @@ namespace SistemaManutencao.API.Controllers
             HttpContext.Items["MensagemAPI"] = "Empresa criada com sucesso";
 
             return Ok(empresaDTO);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var empresasDTO = await _getAllEmpresas.ExecuteAsync();
+
+            return Ok(empresasDTO);
         }
     }
 }

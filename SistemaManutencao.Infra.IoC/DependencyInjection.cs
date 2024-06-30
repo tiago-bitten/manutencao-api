@@ -13,6 +13,7 @@ using SistemaManutencao.Application.UseCases.Empresas;
 using SistemaManutencao.Application.UseCases.Equipamentos;
 using SistemaManutencao.Application.UseCases.Localizacoes;
 using SistemaManutencao.Application.UseCases.Modelos;
+using SistemaManutencao.Application.UseCases.Proprietarios;
 using SistemaManutencao.Application.UseCases.Tecnicos;
 using SistemaManutencao.Domain.Interfaces.DapperRepositories;
 using SistemaManutencao.Domain.Interfaces.Repositories;
@@ -35,12 +36,15 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IDbConnection>(sp => 
             new NpgsqlConnection(configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<DatabaseCleanupService>();
+
             services.AddAutoMapper(typeof(CategoriaProfile));
             services.AddAutoMapper(typeof(ModeloProfile));
             services.AddAutoMapper(typeof(EquipamentoProfile));
             services.AddAutoMapper(typeof(LocalizacaoProfile));
             services.AddAutoMapper(typeof(TecnicoProfile));
             services.AddAutoMapper(typeof(EmpresaProfile));
+            services.AddAutoMapper(typeof(ProprietarioProfile));
 
             return services;
         }
@@ -56,6 +60,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<ITecnicoRepository, TecnicoRepository>();
             services.AddScoped<IEspecializacaoRepository, EspecializacaoRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IProprietarioRepository, ProprietarioRepository>();
 
             services.AddScoped<ITecnicoDapperRepository, TecnicoDapperRepository>();
 
@@ -71,6 +76,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IEquipamentoService, EquipamentoService>();
             services.AddScoped<IEspecializacaoService, EspecializacaoService>();
             services.AddScoped<IUsuarioService, UsuarioService>();
+            services.AddScoped<IProprietarioService, ProprietarioService>();
 
             services.AddScoped<IAuthService, JwtTokenService>();
 
@@ -106,6 +112,10 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<CreateTecnico>();
 
             services.AddScoped<CreateEmpresa>();
+            services.AddScoped<GetAllEmpresas>();
+
+            services.AddScoped<CreateProprietario>();
+            services.AddScoped<GetAllProprietarios>();
 
             services.AddScoped<Login>();
 

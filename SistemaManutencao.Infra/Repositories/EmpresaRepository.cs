@@ -11,5 +11,19 @@ namespace SistemaManutencao.Infra.Data.Repositories
             : base(context)
         {
         }
+
+        public override async Task<IEnumerable<Empresa?>> GetAllAsync()
+        {
+            return await _context.Set<Empresa>()
+                .Include(e => e.Proprietario)
+                .ToListAsync();
+        }
+
+        public override async Task<Empresa?> GetByIdAsync(Guid id)
+        {
+            return await _context.Set<Empresa>()
+                .Include(e => e.Proprietario)
+                .FirstOrDefaultAsync(e => e.Id == id);
+        }
     }
 }
