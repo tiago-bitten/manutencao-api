@@ -16,9 +16,9 @@ namespace SistemaManutencao.Application.UseCases.Equipamentos
 
         public async Task ExecuteAsync(Guid id)
         {
-            var equipamento = await _equipamentoService.ValidarExistenciaAsync(id);
+            var equipamento = await _equipamentoService.ValidateEntityAsync(id);
 
-            _equipamentoRepository.Remove(equipamento);
+            await _equipamentoRepository.SoftRemoveAsync(equipamento.Id);
         }
     }
 }

@@ -65,7 +65,7 @@ namespace SistemaManutencao.Application.Services
             var userId = jsonToken?.Claims.First(claim => claim.Type == "UserId").Value;
 
             if (userId == null)
-                throw new SecurityTokenException("Token inválido");
+                throw new SecurityTokenException("EX10015: Token inválido");
 
             return Guid.Parse(userId);
         }
@@ -73,7 +73,7 @@ namespace SistemaManutencao.Application.Services
         public string ResolveToken(string authHeader)
         {
             if (authHeader == null || !authHeader.StartsWith("Bearer "))
-                throw new ArgumentException("Token inválido");
+                throw new SecurityTokenException($"EX10016: Token inválido");
 
             return authHeader[7..];
         }

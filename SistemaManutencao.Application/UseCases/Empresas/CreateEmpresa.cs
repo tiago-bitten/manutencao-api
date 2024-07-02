@@ -27,12 +27,9 @@ namespace SistemaManutencao.Application.UseCases.Empresas
         public async Task<GetEmpresaDTO> ExecuteAsync(CreateEmpresaDTO dto, string authHeader)
         {
             var usuarioId = _authService.GetUserId(authHeader);
-            var usuario = await _usuarioService.ValidarExistenciaAsync(usuarioId);
+            var usuario = await _usuarioService.ValidateEntityAsync(usuarioId);
             
-            if (!usuario.TipoUsuario.Equals(ETipoUsuario.Funcionario))
-                throw new Exception("Usuário não tem permissão para criar empresa");
-
-            var proprietario = await _proprietarioService.ValidarExistenciaAsync(dto.ProprietarioId);
+            var proprietario = await _proprietarioService.ValidateEntityAsync(dto.ProprietarioId);
 
             var empresa = _mapper.Map<Empresa>(dto);
 

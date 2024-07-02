@@ -11,6 +11,7 @@ namespace SistemaManutencao.Infra.Data.Repositories
             : base(context)
         {
         }
+
         public async Task<Usuario?> GetByEmailAsync(string email)
         {
             return await _context.Set<Usuario>()

@@ -24,9 +24,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreateEquipamentoDTO dto)
+        public async Task<IActionResult> Create([FromBody] CreateEquipamentoDTO dto, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var equipamentoDTO = await _createEquipamento.ExecuteAsync(dto);
+            var equipamentoDTO = await _createEquipamento.ExecuteAsync(dto, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Equipamento criado com sucesso";
 
@@ -44,12 +44,10 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome)
+        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var equipamentosDTO = await _getAllEquipamentos.ExecuteAsync(nome);
-
+            var equipamentosDTO = await _getAllEquipamentos.ExecuteAsync(nome, authHeader);
             HttpContext.Items["MensagemAPI"] = "Equipamentos retornados com sucesso";
-
             return Ok(equipamentosDTO);
         }
 

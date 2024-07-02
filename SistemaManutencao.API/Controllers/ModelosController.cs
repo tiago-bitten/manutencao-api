@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Modelo;
 using SistemaManutencao.Application.UseCases.Modelos;
+using SistemaManutencao.Infra.Data.Constants;
 
 namespace SistemaManutencao.API.Controllers
 {
+    [Authorize(Policy = Policies.UsuarioAtivo)]
     [Route("api/[controller]")]
     [ApiController]
     public class ModelosController : ControllerBase
@@ -25,9 +28,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreateModeloDTO dto)
+        public async Task<IActionResult> Create([FromBody] CreateModeloDTO dto, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var modeloDTO = await _createModelo.ExecuteAsync(dto);
+            var modeloDTO = await _createModelo.ExecuteAsync(dto, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Modelo criado com sucesso";
 
@@ -48,9 +51,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome)
+        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var modelosDTO = await _getAllModelos.ExecuteAsync(nome);
+            var modelosDTO = await _getAllModelos.ExecuteAsync(nome, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Modelos retornados com sucesso";
 

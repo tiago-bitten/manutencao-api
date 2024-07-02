@@ -24,9 +24,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreateLocalizacaoDTO dto)
+        public async Task<IActionResult> Create([FromBody] CreateLocalizacaoDTO dto, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var localizacao = await _createLocalizacao.ExecuteAsync(dto);
+            var localizacao = await _createLocalizacao.ExecuteAsync(dto, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Localização criada com sucesso";
 
@@ -47,9 +47,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome)
+        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var localizacoes = await _getAllLocalizacoes.ExecuteAsync(nome);
+            var localizacoes = await _getAllLocalizacoes.ExecuteAsync(nome, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Localizações retornadas com sucesso";
 

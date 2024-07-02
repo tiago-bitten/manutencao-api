@@ -21,12 +21,22 @@ namespace SistemaManutencao.Infra.Data.Repositories
                 .FirstOrDefaultAsync(e => e.Id == id);
         }
 
-        public override async Task<IEnumerable<Equipamento>> GetAllAsync()
+        public override async Task<IEnumerable<Equipamento?>> GetAllAsync()
         {
             return await _context.Set<Equipamento>()
                 .Include(e => e.Categoria)
                 .Include(e => e.Modelo)
                 .Include(e => e.Localizacao)
+                .ToListAsync();
+        }
+
+        public override async Task<IEnumerable<Equipamento?>> GetAllByEmpresaIdAsync(Guid empresaId)
+        {
+            return await _context.Set<Equipamento>()
+                .Include(e => e.Categoria)
+                .Include(e => e.Modelo)
+                .Include(e => e.Localizacao)
+                .Where(e => e.Empresa.Id == empresaId)
                 .ToListAsync();
         }
 

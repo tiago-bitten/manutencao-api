@@ -26,10 +26,7 @@ namespace SistemaManutencao.Application.UseCases.Proprietarios
         public async Task<GetProprietarioDTO> ExecuteAsync(CreateProprietarioDTO dto, string authHeader)
         {
             var usuarioId = _authService.GetUserId(authHeader);
-            var usuario = await _usuarioService.ValidarExistenciaAsync(usuarioId);
-
-            if (!usuario.TipoUsuario.Equals(ETipoUsuario.Funcionario))
-                throw new RegraNegocioException("EX10012", "Usuário não tem permissão para criar proprietário");
+            var usuario = await _usuarioService.ValidateEntityAsync(usuarioId);
 
             var proprietarioEmail = await _proprietarioRepository.GetByEmailAsync(dto.Email);
 

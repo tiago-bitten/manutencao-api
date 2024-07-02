@@ -16,9 +16,9 @@ namespace SistemaManutencao.Application.UseCases.Localizacoes
 
         public async Task ExecuteAsync(Guid id)
         {
-            var localizacao = await _localizacaoService.ValidarExistenciaAsync(id);
+            var localizacao = await _localizacaoService.ValidateEntityAsync(id);
 
-            _localizacaoRepository.Remove(localizacao);
+            await _localizacaoRepository.SoftRemoveAsync(localizacao.Id);
         }
     }
 }

@@ -11,33 +11,49 @@ namespace SistemaManutencao.Application.UseCases.Tecnicos
     {
         private readonly ITecnicoDapperRepository _tecnicoDapperRepository;
         private readonly ITecnicoRepository _tecnicoRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IAuthService _authService;
         private readonly IEspecializacaoService _especializacaoService;
         private readonly IMapper _mapper;
 
-        public CreateTecnico(ITecnicoDapperRepository tecnicoDapperRepository, ITecnicoRepository tecnicoRepository, IEspecializacaoService especializacaoService, IMapper mapper)
+        public CreateTecnico(ITecnicoDapperRepository tecnicoDapperRepository, ITecnicoRepository tecnicoRepository, IUsuarioRepository usuarioRepository, IAuthService authService, IEspecializacaoService especializacaoService, IMapper mapper)
         {
             _tecnicoDapperRepository = tecnicoDapperRepository;
             _tecnicoRepository = tecnicoRepository;
+            _usuarioRepository = usuarioRepository;
+            _authService = authService;
             _especializacaoService = especializacaoService;
             _mapper = mapper;
         }
 
-        public async Task<GetTecnicoDTO> ExecuteAsync(CreateTecnicoDTO dto)
+        public async Task<GetTecnicoDTO> ExecuteAsync(CreateTecnicoDTO dto, string authHeader)
         {
+            var empresaId = _authService.GetEmpresaId(authHeader);
+
             var tecnico = _mapper.Map<Tecnico>(dto);
 
             if (dto.EspecializacaoId.HasValue)
-            {
-                tecnico.Especializacao = await _especializacaoService.ValidarExistenciaAsync(dto.EspecializacaoId.Value);
-            }
+                tecnico.Especializacao = await _especializacaoService.ValidateEntityByEmpresaIdAsync(dto.EspecializacaoId.Value, empresaId);
 
+            tecnico.EmpresaId = empresaId;
 
             if (dto.PossuiAcesso.HasValue && dto.PossuiAcesso.Equals(true))
             {
                 var senhaHash = BCrypt.Net.BCrypt.HashPassword(dto.Senha);
-                tecnico.EmpresaId = Guid.Parse("3a9485f7-33cf-4558-a511-b457b07e8aac");
-                tecnico = await _tecnicoDapperRepository.CreateTecnicoComAcessoAsync(tecnico, dto.Email, senhaHash);
-                //tecnico = await _tecnicoRepository.CreateTecnicoComAcessoAsync(tecnico, dto.Email, senhaHash);
+
+                var usuario = new Usuario
+                {
+                    Email = dto.Email,
+                    SenhaHash = senhaHash,
+                    Ativo = true,
+                    EmpresaId = empresaId
+                };
+
+                await _tecnicoRepository.AddAsync(tecnico);
+
+                usuario.Tecnico = tecnico;
+
+                await _usuarioRepository.AddAsync(usuario);
             }
             else
             {

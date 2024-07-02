@@ -47,9 +47,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome)
+        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var categoriasDTO = await _getAllCategorias.ExecuteAsync(nome);
+            var categoriasDTO = await _getAllCategorias.ExecuteAsync(nome, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Categorias retornadas com sucesso";
 
@@ -57,9 +57,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpPut("Update/{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] UpdateCategoriaDTO dto)
+        public async Task<IActionResult> Update(Guid id, [FromBody] UpdateCategoriaDTO dto, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var categoriaDTO = await _updateCategoria.ExecuteAsync(id, dto);
+            var categoriaDTO = await _updateCategoria.ExecuteAsync(id, dto, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Categoria atualizada com sucesso";
             

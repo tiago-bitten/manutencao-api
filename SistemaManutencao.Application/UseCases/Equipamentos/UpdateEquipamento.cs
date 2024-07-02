@@ -46,13 +46,13 @@ namespace SistemaManutencao.Application.UseCases.Equipamentos
                 equipamento.DataAquisicao = dto.DataAquisicao.Value;
 
             if (dto.ModeloId.HasValue)
-                equipamento.Modelo = await _modeloService.ValidarExistenciaAsync(dto.ModeloId.Value);
+                equipamento.Modelo = await _modeloService.ValidateEntityAsync(dto.ModeloId.Value);
 
             if (dto.LocalizacaoId.HasValue)
-                equipamento.Localizacao = await _localizacaoService.ValidarExistenciaAsync(dto.LocalizacaoId.Value);
+                equipamento.Localizacao = await _localizacaoService.ValidateEntityAsync(dto.LocalizacaoId.Value);
 
             if (dto.CategoriaId.HasValue)
-                equipamento.Categoria = await _categoriaService.ValidarExistenciaAsync(dto.CategoriaId.Value);
+                equipamento.Categoria = await _categoriaService.ValidateEntityAsync(dto.CategoriaId.Value);
 
             _equipamentoRepository.Update(equipamento);
 

@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authentication;
 using SistemaManutencao.Application.DTOs.Entities.Equipamento;
-using SistemaManutencao.Domain.Exceptions;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Domain.Interfaces.Services;
 
@@ -22,9 +20,7 @@ namespace SistemaManutencao.Application.UseCases.Equipamentos
 
         public async Task<GetEquipamentoDTO> ExecuteAsync(Guid id)
         {
-            var equipamento = await _equipamentoService.ValidarExistenciaAsync(id);
-
-            Console.WriteLine(equipamento.Localizacao);
+            var equipamento = await _equipamentoService.ValidateEntityAsync(id);
 
             return _mapper.Map<GetEquipamentoDTO>(equipamento);
         }

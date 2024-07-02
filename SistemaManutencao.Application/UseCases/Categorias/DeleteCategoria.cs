@@ -16,9 +16,9 @@ namespace SistemaManutencao.Application.UseCases.Categorias
 
         public async Task ExecuteAsync(Guid id)
         {
-            var categoria = await _categoriaService.ValidarExistenciaAsync(id);
+            var categoria = await _categoriaService.ValidateEntityAsync(id);
 
-            _categoriaRepository.Remove(categoria);
+            await _categoriaRepository.SoftRemoveAsync(categoria.Id);
         }
     }
 }

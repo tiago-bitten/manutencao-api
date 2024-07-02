@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.WebSockets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -114,6 +115,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<DeleteLocalizacao>();
 
             services.AddScoped<CreateTecnico>();
+            services.AddScoped<GetAllTecnicos>();
 
             services.AddScoped<CreateEmpresa>();
             services.AddScoped<GetAllEmpresas>();

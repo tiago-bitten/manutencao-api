@@ -34,14 +34,6 @@ namespace SistemaManutencao.Infra.Data.EntitiesConfig
                 .HasColumnType("boolean")
                 .HasDefaultValue(true);
 
-            builder.Property(u => u.TipoUsuario)
-                .HasColumnName("tipo_usuario")
-                .HasColumnType("text")
-                .HasConversion(
-                    v => v.ToString(),
-                    v => (ETipoUsuario)System.Enum.Parse(typeof(ETipoUsuario), v))
-                .IsRequired();
-
             builder.Property(u => u.TecnicoId)
                 .HasColumnName("tecnico_id")
                 .HasColumnType("uuid");

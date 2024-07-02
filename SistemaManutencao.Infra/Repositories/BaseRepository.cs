@@ -22,6 +22,13 @@ namespace SistemaManutencao.Infra.Data.Repositories
             return await _context.Set<T>().ToListAsync();
         }
 
+        public virtual async Task<IEnumerable<T?>> GetAllByEmpresaIdAsync(Guid empresaId)
+        {
+            return await _context.Set<T>()
+                .Where(e => EF.Property<Guid>(e, "EmpresaId") == empresaId)
+                .ToListAsync();
+        }
+
         public virtual async Task AddAsync(T entity)
         {
             await _context.Set<T>().AddAsync(entity);
@@ -50,6 +57,14 @@ namespace SistemaManutencao.Infra.Data.Repositories
         {
             _context.Set<T>().RemoveRange(entities);
             _context.SaveChanges();
+        }
+
+        public virtual async Task SoftRemoveAsync(Guid id)
+        {
+            var entity = await GetByIdAsync(id);
+
+            _context.Entry(entity).Property("Ativo").CurrentValue = false;
+            await _context.SaveChangesAsync();
         }
     }
 }

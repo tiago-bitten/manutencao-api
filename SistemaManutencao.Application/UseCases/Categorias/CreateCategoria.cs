@@ -25,7 +25,7 @@ namespace SistemaManutencao.Application.UseCases.Categorias
         {
             var empresaId = _authService.GetEmpresaId(authHeader);
 
-            var empresa = await _empresaService.ValidarExistenciaAsync(empresaId);
+            var empresa = await _empresaService.ValidateEntityAsync(empresaId);
 
             var categoria = _mapper.Map<Categoria>(dto);
 

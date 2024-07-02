@@ -16,9 +16,9 @@ namespace SistemaManutencao.Application.UseCases.Modelos
 
         public async Task ExecuteAsync(Guid id)
         {
-            var modelo = await _modeloService.ValidarExistenciaAsync(id);
+            var modelo = await _modeloService.ValidateEntityAsync(id);
 
-            _modeloRepository.Remove(modelo);
+            await _modeloRepository.SoftRemoveAsync(modelo.Id);
         }
     }
 }

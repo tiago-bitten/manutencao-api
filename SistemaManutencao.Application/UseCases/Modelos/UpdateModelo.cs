@@ -21,7 +21,7 @@ namespace SistemaManutencao.Application.UseCases.Modelos
 
         public async Task<GetModeloDTO> ExecuteAsync(Guid id, UpdateModeloDTO dto)
         {
-            var modelo = await _modeloService.ValidarExistenciaAsync(id);
+            var modelo = await _modeloService.ValidateEntityAsync(id);
 
             if (!string.IsNullOrEmpty(dto.Nome))
                 modelo.Nome = dto.Nome;
