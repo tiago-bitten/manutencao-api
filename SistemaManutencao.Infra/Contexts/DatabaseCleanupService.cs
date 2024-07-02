@@ -47,8 +47,8 @@ public class DatabaseCleanupService
             var defaultUserId = Guid.NewGuid();
             var senhaHash = BCrypt.Net.BCrypt.HashPassword("123456789");
             await _context.Database.ExecuteSqlInterpolatedAsync($@"
-                INSERT INTO usuarios (id, email, senha_hash, ativo, tipo_usuario, empresa_id) 
-                VALUES ({defaultUserId}, 'usuario@padrao.com', {senhaHash}, true, 'Funcionario', {defaultCompanyId});");
+                INSERT INTO usuarios (id, email, senha_hash, ativo, empresa_id) 
+                VALUES ({defaultUserId}, 'usuario@padrao.com', {senhaHash}, true, {defaultCompanyId});");
 
             await transaction.CommitAsync();
         }

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.WebSockets;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +13,7 @@ using SistemaManutencao.Application.UseCases.Categorias;
 using SistemaManutencao.Application.UseCases.Empresas;
 using SistemaManutencao.Application.UseCases.Equipamentos;
 using SistemaManutencao.Application.UseCases.Localizacoes;
+using SistemaManutencao.Application.UseCases.Manutencoes;
 using SistemaManutencao.Application.UseCases.Modelos;
 using SistemaManutencao.Application.UseCases.Proprietarios;
 using SistemaManutencao.Application.UseCases.Tecnicos;
@@ -49,6 +49,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddAutoMapper(typeof(TecnicoProfile));
             services.AddAutoMapper(typeof(EmpresaProfile));
             services.AddAutoMapper(typeof(ProprietarioProfile));
+            services.AddAutoMapper(typeof(ManutencaoProfile));
 
             return services;
         }
@@ -122,6 +123,8 @@ namespace SistemaManutencao.Infra.IoC
 
             services.AddScoped<CreateProprietario>();
             services.AddScoped<GetAllProprietarios>();
+
+            services.AddScoped<CreateManutencao>();
 
             services.AddScoped<Login>();
 

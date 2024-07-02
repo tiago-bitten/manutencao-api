@@ -37,9 +37,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(Guid id)
+        public async Task<IActionResult> GetById(Guid id, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var categoriaDTO = await _getCategoriaById.ExecuteAsync(id);
+            var categoriaDTO = await _getCategoriaById.ExecuteAsync(id, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Categoria retornada com sucesso";
 

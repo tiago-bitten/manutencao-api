@@ -9,14 +9,12 @@ namespace SistemaManutencao.Application.UseCases.Categorias
     public class CreateCategoria
     {
         private readonly ICategoriaRepository _categoriaRepository;
-        private readonly IEmpresaService _empresaService;
         private readonly IAuthService _authService;
         private readonly IMapper _mapper;
 
-        public CreateCategoria(ICategoriaRepository categoriaRepository, IEmpresaService empresaService, IAuthService authService, IMapper mapper)
+        public CreateCategoria(ICategoriaRepository categoriaRepository, IAuthService authService, IMapper mapper)
         {
             _categoriaRepository = categoriaRepository;
-            _empresaService = empresaService;
             _authService = authService;
             _mapper = mapper;
         }
@@ -25,11 +23,9 @@ namespace SistemaManutencao.Application.UseCases.Categorias
         {
             var empresaId = _authService.GetEmpresaId(authHeader);
 
-            var empresa = await _empresaService.ValidateEntityAsync(empresaId);
-
             var categoria = _mapper.Map<Categoria>(dto);
 
-            categoria.Empresa = empresa;
+            categoria.EmpresaId = empresaId;
 
             await _categoriaRepository.AddAsync(categoria);
 
