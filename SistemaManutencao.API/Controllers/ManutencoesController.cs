@@ -12,10 +12,12 @@ namespace SistemaManutencao.API.Controllers
     public class ManutencoesController : ControllerBase
     {
         private readonly CreateManutencao _createManutencao;
+        private readonly GetAllManutencoes _getAllManutencoes;
 
-        public ManutencoesController(CreateManutencao createManutencao)
+        public ManutencoesController(CreateManutencao createManutencao, GetAllManutencoes getAllManutencoes)
         {
             _createManutencao = createManutencao;
+            _getAllManutencoes = getAllManutencoes;
         }
 
         [HttpPost("Create")]
@@ -26,6 +28,14 @@ namespace SistemaManutencao.API.Controllers
             HttpContext.Items["MensagemAPI"] = "Manutenção criada com sucesso";
 
             return Ok(manutencaoDTO);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
+        {
+            var manutencoesDTO = await _getAllManutencoes.ExecuteAsync(nome, authHeader);
+
+            return Ok(manutencoesDTO);
         }
     }
 }

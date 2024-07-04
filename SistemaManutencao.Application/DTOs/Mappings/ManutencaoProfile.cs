@@ -16,7 +16,9 @@ namespace SistemaManutencao.Application.DTOs.Mappings
             CreateMap<CreateManutencaoDTO, Manutencao>();
 
             CreateMap<Manutencao, GetManutencaoDTO>()
-                .ForMember(dest => dest.Tecnicos, opt => opt.Ignore());
+                .ForMember(dest => dest.Tecnicos, opt => opt.MapFrom(x => x.OrdemServicos));
+
+            CreateMap<Manutencao, GetSimpManutencaoDTO>();
         }
     }
 }

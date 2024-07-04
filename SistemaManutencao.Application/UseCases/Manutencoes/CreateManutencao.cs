@@ -26,9 +26,27 @@ namespace SistemaManutencao.Application.UseCases.Manutencoes
         public async Task<GetManutencaoDTO> ExecuteAsync(CreateManutencaoDTO dto, string authHeader)
         {
             var empresaId = _authService.GetEmpresaId(authHeader);
-
             var equipamento = await _equipamentoService.ValidateEntityByEmpresaIdAsync(dto.EquipamentoId, empresaId);
 
+            ValidateManutencao(dto);
+            
+            var manutencao = _mapper.Map<Manutencao>(dto);
+
+            SetManutencaoProperties(manutencao, empresaId, equipamento);
+
+            await _manutencaoRepository.AddAsync(manutencao);
+
+            return _mapper.Map<GetManutencaoDTO>(manutencao);
+        }
+
+        private void SetManutencaoProperties(Manutencao manutencao, Guid empresaId, Equipamento equipamento)
+        {
+            manutencao.EmpresaId = empresaId;
+            manutencao.Equipamento = equipamento;
+        }
+
+        private void ValidateManutencao(CreateManutencaoDTO dto)
+        {
             if (dto.DataConclusao.HasValue && dto.DataConclusao.Value < dto.DataInicio)
                 throw new RegraNegocioException("Ex10020", "Data de conclusão não pode ser anterior a data de início");
 
@@ -37,15 +55,6 @@ namespace SistemaManutencao.Application.UseCases.Manutencoes
 
             if (dto.Status != EStatusManutencao.Concluido && dto.DataConclusao.HasValue)
                 throw new RegraNegocioException("Ex10022", "Data de conclusão não pode ser informada para manutenções não concluidas");
-
-            var manutencao = _mapper.Map<Manutencao>(dto);
-
-            manutencao.Equipamento = equipamento;
-            manutencao.EmpresaId = empresaId;
-
-            await _manutencaoRepository.AddAsync(manutencao);
-
-            return _mapper.Map<GetManutencaoDTO>(manutencao);
         }
     }
 }

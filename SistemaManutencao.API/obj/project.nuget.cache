@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wX8L8hNAHbq1Kof8lL5KjriGR/9J2iWTX+rwb5i1dOc9a+Tht6ueBWfZH4OYr5sEC+EZZlARPJ+0z5W/m+3xdw==",
+  "dgSpecHash": "/yYB2dJWInw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.API\\SistemaManutencao.API.csproj",
+  "projectFilePath": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\SistemaManutencao.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiago\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",

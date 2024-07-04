@@ -1,4 +1,5 @@
 ﻿using SistemaManutencao.Application.DTOs.Entities.Equipamento;
+using SistemaManutencao.Application.DTOs.Entities.OrdensServicos;
 using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Domain.Enums;
 using System;
@@ -19,6 +20,6 @@ namespace SistemaManutencao.Application.DTOs.Entities.Manutencoes
         public EStatusManutencao Status { get; set; }
         public ETipoManutencao TipoManutencao { get; set; }
         public GetEquipamentoDTO Equipamento { get; set; }
-        public IEnumerable<Tecnico?> Tecnicos { get; set; }
+        public IEnumerable<GetOrdemServicoDTO?> Tecnicos { get; set; }
     }
 }

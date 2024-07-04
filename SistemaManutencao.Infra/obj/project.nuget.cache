@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4QzptCZl40UhoyY2df/5DTsj6Eby9Ni/R80Vpabbv5jkUrMsNEGmFirJVxmnfaaRNNqqQFtDcRJ7TgZPZ98kgw==",
+  "dgSpecHash": "66Lnsq4KIgU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tiago\\Documents\\CSHARP\\p-projetos\\SistemaManutencao\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj",
+  "projectFilePath": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiago\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

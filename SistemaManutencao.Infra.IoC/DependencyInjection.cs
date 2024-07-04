@@ -15,6 +15,8 @@ using SistemaManutencao.Application.UseCases.Equipamentos;
 using SistemaManutencao.Application.UseCases.Localizacoes;
 using SistemaManutencao.Application.UseCases.Manutencoes;
 using SistemaManutencao.Application.UseCases.Modelos;
+using SistemaManutencao.Application.UseCases.OrdensServicos;
+using SistemaManutencao.Application.UseCases.Papeis;
 using SistemaManutencao.Application.UseCases.Proprietarios;
 using SistemaManutencao.Application.UseCases.Tecnicos;
 using SistemaManutencao.Domain.Interfaces.DapperRepositories;
@@ -50,6 +52,8 @@ namespace SistemaManutencao.Infra.IoC
             services.AddAutoMapper(typeof(EmpresaProfile));
             services.AddAutoMapper(typeof(ProprietarioProfile));
             services.AddAutoMapper(typeof(ManutencaoProfile));
+            services.AddAutoMapper(typeof(OrdemServicoProfile));
+            services.AddAutoMapper(typeof(PapelProfile));
 
             return services;
         }
@@ -66,6 +70,8 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IEspecializacaoRepository, EspecializacaoRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IProprietarioRepository, ProprietarioRepository>();
+            services.AddScoped<IOrdemServicoRepository, OrdemServicoRepository>();
+            services.AddScoped<IPapelRepository, PapelRepository>();
 
             services.AddScoped<ITecnicoDapperRepository, TecnicoDapperRepository>();
 
@@ -83,6 +89,8 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IUsuarioService, UsuarioService>();
             services.AddScoped<IProprietarioService, ProprietarioService>();
             services.AddScoped<IEmpresaService, EmpresaService>();
+            services.AddScoped<IPapelService, PapelService>();
+            services.AddScoped<ITecnicoService, TecnicoService>();
 
             services.AddScoped<IAuthService, JwtTokenService>();
 
@@ -125,6 +133,11 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<GetAllProprietarios>();
 
             services.AddScoped<CreateManutencao>();
+            services.AddScoped<GetAllManutencoes>();
+
+            services.AddScoped<CreatePapel>();
+
+            services.AddScoped<CreateOrdemServico>();
 
             services.AddScoped<Login>();
 
