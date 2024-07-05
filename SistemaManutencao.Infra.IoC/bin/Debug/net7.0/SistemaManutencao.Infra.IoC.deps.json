@@ -580,6 +580,7 @@
           "FluentValidation": "11.0.0",
           "FluentValidation.AspNetCore": "11.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "7.0.0",

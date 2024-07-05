@@ -41,10 +41,6 @@ namespace SistemaManutencao.Application.UseCases.OrdensServicos
 
             await _ordemServicoRepository.AddAsync(ordemServico);
 
-            manutencao.OrdemServicos.Add(ordemServico);
-
-            _manutencaoRepository.Update(manutencao);
-
             return _mapper.Map<GetOrdemServicoDTO>(ordemServico);
         }
 

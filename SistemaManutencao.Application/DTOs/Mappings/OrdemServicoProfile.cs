@@ -10,7 +10,9 @@ namespace SistemaManutencao.Application.DTOs.Mappings
         {
             CreateMap<CreateOrdemServicoDTO, OrdemServico>();
 
-            CreateMap<OrdemServico, GetSimpOrdemServicoDTO>();
+            CreateMap<OrdemServico, GetSimpOrdemServicoDTO>()
+                .ForMember(dest => dest.Tecnico, opt => opt.MapFrom(x => x.Tecnico))
+                .ForMember(dest => dest.Papel, opt => opt.MapFrom(x => x.Papel));
 
             CreateMap<OrdemServico, GetOrdemServicoDTO>()
                 .ForMember(dest => dest.Manutencao, opt => opt.MapFrom(x => x.Manutencao))

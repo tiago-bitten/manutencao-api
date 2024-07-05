@@ -11,5 +11,16 @@ namespace SistemaManutencao.Infra.Data.Repositories
             : base(context)
         {
         }
+
+        public async override Task<IEnumerable<OrdemServico?>> GetAllByEmpresaIdAsync(Guid empresaId)
+        {
+            return await _context.Set<OrdemServico>()
+                .Include(os => os.Manutencao)
+                .Include(os => os.Tecnico)
+                .Include(os => os.Papel)
+                .Include(os => os.Empresa)
+                .Where(os => os.EmpresaId == empresaId)
+                .ToListAsync();
+        }
     }
 }

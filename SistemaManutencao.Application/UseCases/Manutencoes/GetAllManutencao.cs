@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using SistemaManutencao.Application.DTOs.Entities.Manutencoes;
 using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Domain.Interfaces.Repositories;
 using SistemaManutencao.Domain.Interfaces.Services;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SistemaManutencao.Application.UseCases.Manutencoes
 {
@@ -13,35 +12,30 @@ namespace SistemaManutencao.Application.UseCases.Manutencoes
     {
         private readonly IManutencaoRepository _manutencaoRepository;
         private readonly IAuthService _authService;
+        private readonly IQueryFilterService _queryFilterService;
         private readonly IMapper _mapper;
 
         public GetAllManutencoes(
             IManutencaoRepository manutencaoRepository,
             IAuthService authService,
+            IQueryFilterService queryFilterService,
             IMapper mapper)
         {
             _manutencaoRepository = manutencaoRepository;
             _authService = authService;
+            _queryFilterService = queryFilterService;
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<GetManutencaoDTO>> ExecuteAsync(string? nome, string authHeader)
+        public async Task<IEnumerable<GetManutencaoDTO>> ExecuteAsync(Filtro filtros, string authHeader)
         {
             var empresaId = _authService.GetEmpresaId(authHeader);
 
             var manutencoes = await _manutencaoRepository.GetAllByEmpresaIdAsync(empresaId);
 
-            var filteredManutencoes = FilterManutencoes(manutencoes, nome);
+            var manutencoesFiltradas = _queryFilterService.AplicarTodosOsFiltros(manutencoes.AsQueryable(), filtros);
 
-            return _mapper.Map<IEnumerable<GetManutencaoDTO>>(filteredManutencoes);
-        }
-
-        private IEnumerable<Manutencao> FilterManutencoes(IEnumerable<Manutencao> manutencoes, string? nome)
-        {
-            if (!string.IsNullOrEmpty(nome))
-                return manutencoes.Where(m => m.Nome.Contains(nome));
-
-            return manutencoes;
+            return _mapper.Map<IEnumerable<GetManutencaoDTO>>(manutencoesFiltradas.ToList());
         }
     }
 }

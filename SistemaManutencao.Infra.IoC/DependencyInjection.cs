@@ -91,6 +91,7 @@ namespace SistemaManutencao.Infra.IoC
             services.AddScoped<IEmpresaService, EmpresaService>();
             services.AddScoped<IPapelService, PapelService>();
             services.AddScoped<ITecnicoService, TecnicoService>();
+            services.AddScoped<IQueryFilterService, QueryFilterService>();
 
             services.AddScoped<IAuthService, JwtTokenService>();
 

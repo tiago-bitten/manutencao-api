@@ -20,6 +20,6 @@ namespace SistemaManutencao.Application.DTOs.Entities.Manutencoes
         public EStatusManutencao Status { get; set; }
         public ETipoManutencao TipoManutencao { get; set; }
         public GetEquipamentoDTO Equipamento { get; set; }
-        public IEnumerable<GetOrdemServicoDTO?> Tecnicos { get; set; }
+        public IEnumerable<GetSimpOrdemServicoDTO?> Tecnicos { get; set; }
     }
 }

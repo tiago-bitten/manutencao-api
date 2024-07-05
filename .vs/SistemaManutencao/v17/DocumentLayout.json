@@ -3,64 +3,92 @@
   "WorkspaceRootPath": "D:\\csharp\\manutencao-api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\usecases\\ordensservicos\\createordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\usecases\\ordensservicos\\createordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra\\repositories\\manutencaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|solutionrelative:sistemamanutencao.infra\\repositories\\manutencaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\usecases\\manutencoes\\getallmanutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\usecases\\manutencoes\\getallmanutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\services\\queryfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\services\\queryfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.domain\\entities\\ordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|solutionrelative:sistemamanutencao.domain\\entities\\ordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\mappings\\manutencaoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\mappings\\manutencaoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.domain\\entities\\manutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|solutionrelative:sistemamanutencao.domain\\entities\\manutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F38C36D1-6D6D-4143-82DE-23862E8FD2F0}|SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra.ioc\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F38C36D1-6D6D-4143-82DE-23862E8FD2F0}|SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj|solutionrelative:sistemamanutencao.infra.ioc\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\usecases\\manutencoes\\getallmanutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\usecases\\manutencoes\\getallmanutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|solutionrelative:sistemamanutencao.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\mappings\\ordemservicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\mappings\\ordemservicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\manutencoes\\getsimpmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\manutencoes\\getsimpmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\manutencoes\\getmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\manutencoes\\getmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.api\\controllers\\ordensservicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|solutionrelative:sistemamanutencao.api\\controllers\\ordensservicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getsimpordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getsimpordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.domain\\interfaces\\services\\iqueryfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|solutionrelative:sistemamanutencao.domain\\interfaces\\services\\iqueryfilterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.api\\controllers\\manutencoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|solutionrelative:sistemamanutencao.api\\controllers\\manutencoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F38C36D1-6D6D-4143-82DE-23862E8FD2F0}|SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra.ioc\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F38C36D1-6D6D-4143-82DE-23862E8FD2F0}|SistemaManutencao.Infra.IoC\\SistemaManutencao.Infra.IoC.csproj|solutionrelative:sistemamanutencao.infra.ioc\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.domain\\entities\\filtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|solutionrelative:sistemamanutencao.domain\\entities\\filtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\manutencoes\\getmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\manutencoes\\getmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra\\repositories\\manutencaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|solutionrelative:sistemamanutencao.infra\\repositories\\manutencaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\mappings\\ordemservicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\mappings\\ordemservicoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra\\repositories\\ordemservicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|solutionrelative:sistemamanutencao.infra\\repositories\\ordemservicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getsimpordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\ordensservicos\\getsimpordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra\\repositories\\equipamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|solutionrelative:sistemamanutencao.infra\\repositories\\equipamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|solutionrelative:sistemamanutencao.infra\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\usecases\\manutencoes\\createmanutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\usecases\\manutencoes\\createmanutencao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.api\\controllers\\ordensservicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|solutionrelative:sistemamanutencao.api\\controllers\\ordensservicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\usecases\\ordensservicos\\createordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\usecases\\ordensservicos\\createordemservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\mappings\\manutencaoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\mappings\\manutencaoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDE45FCD-9958-4120-A55F-6725576F4092}|SistemaManutencao.API\\SistemaManutencao.API.csproj|solutionrelative:sistemamanutencao.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\dtos\\entities\\manutencoes\\getsimpmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\manutencoes\\getsimpmanutencaodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.application\\services\\papelservie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,10 +143,6 @@
       "RelativeMoniker": "D:0:0:{5D36F9CF-0B5B-4746-AECE-0C85664D97D8}|SistemaManutencao.Application\\SistemaManutencao.Application.csproj|solutionrelative:sistemamanutencao.application\\dtos\\entities\\ordensservicos\\createordemservicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.infra\\repositories\\ordemservicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB52A213-AF8E-4B88-BB79-64B6011447AF}|SistemaManutencao.Infra\\SistemaManutencao.Infra.Data.csproj|solutionrelative:sistemamanutencao.infra\\repositories\\ordemservicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|d:\\csharp\\manutencao-api\\sistemamanutencao.domain\\interfaces\\repositories\\iordemservicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79A2EB8B-0377-46DD-BC31-8F71F410C58B}|SistemaManutencao.Domain\\SistemaManutencao.Domain.csproj|solutionrelative:sistemamanutencao.domain\\interfaces\\repositories\\iordemservicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -130,37 +154,258 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Program.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.API\\Program.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Program.cs",
-              "RelativeToolTip": "SistemaManutencao.API\\Program.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Manutencao.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\Manutencao.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Entities\\Manutencao.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\Manutencao.cs",
+              "RelativeToolTip": "SistemaManutencao.Domain\\Entities\\Manutencao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T02:19:35.043Z",
+              "WhenOpened": "2024-07-05T02:21:00.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Filtro.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\Filtro.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Entities\\Filtro.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\Filtro.cs",
+              "RelativeToolTip": "SistemaManutencao.Domain\\Entities\\Filtro.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T01:51:02.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QueryFilterService.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\Services\\QueryFilterService.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\Services\\QueryFilterService.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\Services\\QueryFilterService.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\Services\\QueryFilterService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwIUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T01:18:25.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IQueryFilterService.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Interfaces\\Services\\IQueryFilterService.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Interfaces\\Services\\IQueryFilterService.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Interfaces\\Services\\IQueryFilterService.cs",
+              "RelativeToolTip": "SistemaManutencao.Domain\\Interfaces\\Services\\IQueryFilterService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T01:09:57.705Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ManutencoesController.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
+              "RelativeToolTip": "SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:17:57.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GetAllManutencao.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAwCcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T00:12:04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra.IoC\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Infra.IoC\\DependencyInjection.cs",
               "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra.IoC\\DependencyInjection.cs",
               "RelativeToolTip": "SistemaManutencao.Infra.IoC\\DependencyInjection.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAgwFwAAABCAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAIwF0AAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T23:25:07.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "OrdemServico.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
+              "RelativeToolTip": "SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:24:07.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetOrdemServicoDTO.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:28:54.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrdemServicoProfile.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwAwAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:33:58.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrdemServicoRepository.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
+              "RelativeToolTip": "SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:23:29.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ManutencaoRepository.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
+              "RelativeToolTip": "SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowD0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:18:27.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetManutencaoDTO.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:32:48.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetSimpOrdemServicoDTO.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:30:17.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EquipamentoRepository.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\EquipamentoRepository.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Infra\\Repositories\\EquipamentoRepository.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\EquipamentoRepository.cs",
+              "RelativeToolTip": "SistemaManutencao.Infra\\Repositories\\EquipamentoRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowBIAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T23:33:23.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Infra\\Repositories\\BaseRepository.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "SistemaManutencao.Infra\\Repositories\\BaseRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T23:26:56.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrdensServicosController.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
+              "RelativeToolTip": "SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwB0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:19:18.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateManutencao.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T00:12:33.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateOrdemServico.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
+              "RelativeToolTip": "SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAA5wCwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T23:49:19.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ManutencaoProfile.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Mappings\\ManutencaoProfile.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Mappings\\ManutencaoProfile.cs",
@@ -173,72 +418,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrdemServico.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
-              "RelativeToolTip": "SistemaManutencao.Domain\\Entities\\OrdemServico.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAZAAAA",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Program.cs",
+              "RelativeDocumentMoniker": "SistemaManutencao.API\\Program.cs",
+              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Program.cs",
+              "RelativeToolTip": "SistemaManutencao.API\\Program.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:24:07.423Z",
+              "WhenOpened": "2024-07-04T02:19:35.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetAllManutencao.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
-              "RelativeToolTip": "SistemaManutencao.Application\\UseCases\\Manutencoes\\GetAllManutencao.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T00:12:04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateOrdemServico.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
-              "RelativeToolTip": "SistemaManutencao.Application\\UseCases\\OrdensServicos\\CreateOrdemServico.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAQwCsAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:49:19.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManutencaoRepository.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
-              "RelativeToolTip": "SistemaManutencao.Infra\\Repositories\\ManutencaoRepository.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wCAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:18:27.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OrdemServicoProfile.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
-              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Mappings\\OrdemServicoProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:33:58.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "GetSimpManutencaoDTO.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetSimpManutencaoDTO.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetSimpManutencaoDTO.cs",
@@ -251,85 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GetOrdemServicoDTO.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
-              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetOrdemServicoDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:28:54.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GetManutencaoDTO.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
-              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Entities\\Manutencoes\\GetManutencaoDTO.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAwA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:32:48.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OrdensServicosController.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
-              "RelativeToolTip": "SistemaManutencao.API\\Controllers\\OrdensServicosController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAABgAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:19:18.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GetSimpOrdemServicoDTO.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
-              "RelativeToolTip": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\GetSimpOrdemServicoDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:30:17.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ManutencoesController.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
-              "RelativeToolTip": "SistemaManutencao.API\\Controllers\\ManutencoesController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:17:57.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CreateManutencao.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
-              "RelativeToolTip": "SistemaManutencao.Application\\UseCases\\Manutencoes\\CreateManutencao.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowCcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T00:12:33.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "PapelServie.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\Services\\PapelServie.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\Services\\PapelServie.cs",
@@ -342,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "TecnicoService.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\Services\\TecnicoService.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\Services\\TecnicoService.cs",
@@ -355,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "IPapelService.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Interfaces\\Services\\IPapelService.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Interfaces\\Services\\IPapelService.cs",
@@ -368,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "ITecnicoService.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Interfaces\\Services\\ITecnicoService.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Interfaces\\Services\\ITecnicoService.cs",
@@ -381,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "PapeisController.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\Controllers\\PapeisController.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.API\\Controllers\\PapeisController.cs",
@@ -394,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "CreatePapel.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\UseCases\\Papeis\\CreatePapel.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\UseCases\\Papeis\\CreatePapel.cs",
@@ -407,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "PapelRepository.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\PapelRepository.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Infra\\Repositories\\PapelRepository.cs",
@@ -420,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "IPapelRepository.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Interfaces\\Repositories\\IPapelRepository.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Interfaces\\Repositories\\IPapelRepository.cs",
@@ -433,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "PapelProfile.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Mappings\\PapelProfile.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Mappings\\PapelProfile.cs",
@@ -446,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "GetPapelDTO.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\Papeis\\GetPapelDTO.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\Papeis\\GetPapelDTO.cs",
@@ -459,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "CreatePapelDTO.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\Papeis\\CreatePapelDTO.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\Papeis\\CreatePapelDTO.cs",
@@ -472,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "Papel.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Entities\\Papel.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Entities\\Papel.cs",
@@ -485,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "CreateOrdemServicoDTO.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\CreateOrdemServicoDTO.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Application\\DTOs\\Entities\\OrdensServicos\\CreateOrdemServicoDTO.cs",
@@ -498,20 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "OrdemServicoRepository.cs",
-              "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
-              "RelativeDocumentMoniker": "SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
-              "ToolTip": "D:\\csharp\\manutencao-api\\SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
-              "RelativeToolTip": "SistemaManutencao.Infra\\Repositories\\OrdemServicoRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T23:23:29.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "IOrdemServicoRepository.cs",
               "DocumentMoniker": "D:\\csharp\\manutencao-api\\SistemaManutencao.Domain\\Interfaces\\Repositories\\IOrdemServicoRepository.cs",
               "RelativeDocumentMoniker": "SistemaManutencao.Domain\\Interfaces\\Repositories\\IOrdemServicoRepository.cs",

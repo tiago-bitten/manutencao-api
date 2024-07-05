@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Manutencoes;
 using SistemaManutencao.Application.UseCases.Manutencoes;
+using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Infra.Data.Constants;
 
 namespace SistemaManutencao.API.Controllers
@@ -31,9 +32,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
+        public async Task<IActionResult> GetAll([FromQuery] Filtro filtro, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var manutencoesDTO = await _getAllManutencoes.ExecuteAsync(nome, authHeader);
+            var manutencoesDTO = await _getAllManutencoes.ExecuteAsync(filtro, authHeader);
 
             return Ok(manutencoesDTO);
         }
