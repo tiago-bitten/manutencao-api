@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/00+eXZTUFs=",
+  "dgSpecHash": "oQnM3T5eanc=",
   "success": true,
   "projectFilePath": "D:\\csharp\\manutencao-api\\SistemaManutencao.API\\SistemaManutencao.API.csproj",
   "expectedPackageFiles": [
@@ -71,6 +71,7 @@
     "C:\\Users\\tiago\\.nuget\\packages\\system.diagnostics.eventlog\\7.0.0\\system.diagnostics.eventlog.7.0.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.6.2\\system.identitymodel.tokens.jwt.7.6.2.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\tiago\\.nuget\\packages\\system.linq.dynamic.core\\1.4.3\\system.linq.dynamic.core.1.4.3.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
     "C:\\Users\\tiago\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",

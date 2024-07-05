@@ -514,6 +514,14 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Linq.Dynamic.Core/1.4.3": {
+        "runtime": {
+          "lib/net7.0/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.4.3.0",
+            "fileVersion": "1.4.3.0"
+          }
+        }
+      },
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -585,7 +593,8 @@
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "Microsoft.Extensions.Options.ConfigurationExtensions": "7.0.0",
           "SistemaManutencao.Domain": "1.0.0",
-          "System.IdentityModel.Tokens.Jwt": "7.6.2"
+          "System.IdentityModel.Tokens.Jwt": "7.6.2",
+          "System.Linq.Dynamic.Core": "1.4.3"
         },
         "runtime": {
           "SistemaManutencao.Application.dll": {}
@@ -1039,6 +1048,13 @@
       "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "path": "system.io/4.3.0",
       "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nT8wpw80ZeZ87CWrMflPqdfnUVJdYEEeFFNOZ2GXoR6bd/D/rKOC9cge9MQgxuOeH7j4NOKhHZDVRooG1Q8+sw==",
+      "path": "system.linq.dynamic.core/1.4.3",
+      "hashPath": "system.linq.dynamic.core.1.4.3.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",

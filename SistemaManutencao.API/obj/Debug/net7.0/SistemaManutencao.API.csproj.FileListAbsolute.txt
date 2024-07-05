@@ -198,3 +198,4 @@ C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bi
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\teste\Documents\CSHARP\projetos\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\csharp\manutencao-api\SistemaManutencao.API\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll

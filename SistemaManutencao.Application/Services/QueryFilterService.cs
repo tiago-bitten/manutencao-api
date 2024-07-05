@@ -1,133 +1,141 @@
-﻿using SistemaManutencao.Domain.Entities;
+﻿using System.Linq.Expressions;
+using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Domain.Interfaces.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
+using System.Linq.Dynamic.Core;
 using System.Reflection;
 
 namespace SistemaManutencao.Application.Services
 {
     public class QueryFilterService : IQueryFilterService
     {
-        public IQueryable<T> AplicarFiltroPorCampo<T>(IQueryable<T> entidades, Dictionary<string, string> filtros)
+        public IQueryable<T> AplicarTodosOsFiltros<T>(IQueryable<T> query, Filtro filtros)
         {
-            var parameter = Expression.Parameter(typeof(T), "e");
-            Expression expression = null;
-
-            foreach (var filtro in filtros)
+            foreach (var filtro in filtros.Filtrar)
             {
-                var propertyNames = filtro.Key.Split('.');
-                Expression propertyAccess = parameter;
-                Type propertyType = typeof(T);
-                Expression containsExpression = null;
-
-                for (int i = 0; i < propertyNames.Length; i++)
+                if (!string.IsNullOrEmpty(filtro.Value))
                 {
-                    var propertyName = propertyNames[i];
-                    var property = propertyType.GetProperty(propertyName, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
-                    if (property == null)
-                        break;
+                    var propriedade = filtro.Key;
+                    var valor = filtro.Value;
 
-                    propertyAccess = Expression.MakeMemberAccess(propertyAccess, property);
-                    propertyType = property.PropertyType;
-
-                    if (i == propertyNames.Length - 1 && propertyType.IsGenericType && typeof(IEnumerable<>).IsAssignableFrom(propertyType.GetGenericTypeDefinition()))
+                    try
                     {
-                        var elementType = propertyType.GetGenericArguments()[0];
-                        var lambdaParameter = Expression.Parameter(elementType, "x");
-                        var innerProperty = elementType.GetProperty(propertyNames.Last(), BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
-                        if (innerProperty == null)
-                            continue;
-
-                        var innerPropertyAccess = Expression.MakeMemberAccess(lambdaParameter, innerProperty);
-                        var filterValue = Expression.Constant(filtro.Value);
-                        var toStringMethod = typeof(object).GetMethod("ToString");
-                        var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
-                        var toStringExpression = Expression.Call(innerPropertyAccess, toStringMethod);
-                        containsExpression = Expression.Call(toStringExpression, containsMethod, filterValue);
-
-                        var lambdaExpression = Expression.Lambda(containsExpression, lambdaParameter);
-                        var anyMethod = typeof(Enumerable).GetMethods(BindingFlags.Static | BindingFlags.Public)
-                            .First(m => m.Name == "Any" && m.GetParameters().Length == 2)
-                            .MakeGenericMethod(elementType);
-                        propertyAccess = Expression.Call(anyMethod, propertyAccess, lambdaExpression);
-                        break;
+                        if (propriedade.Contains("."))
+                        {
+                            // Tratamento para propriedades aninhadas e coleções
+                            query = query.Where(GenerateNestedFilterExpression<T>(propriedade, valor));
+                        }
+                        else
+                        {
+                            // Filtro simples
+                            query = query.Where($"{propriedade}.Contains(@0)", valor);
+                        }
                     }
-                }
-
-                if (propertyAccess != parameter && containsExpression == null && !string.IsNullOrEmpty(filtro.Value))
-                {
-                    var filterValue = Expression.Constant(filtro.Value);
-                    var toStringMethod = typeof(object).GetMethod("ToString");
-                    var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
-                    var toStringExpression = Expression.Call(propertyAccess, toStringMethod);
-                    containsExpression = Expression.Call(toStringExpression, containsMethod, filterValue);
-                }
-
-                if (containsExpression != null)
-                {
-                    if (expression == null)
+                    catch (Exception ex)
                     {
-                        expression = containsExpression;
-                    }
-                    else
-                    {
-                        expression = Expression.AndAlso(expression, containsExpression);
+                        // Log e tratamento de erro
+                        throw new InvalidOperationException($"Erro ao aplicar filtro na propriedade '{propriedade}': {ex.Message}", ex);
                     }
                 }
             }
 
-            if (expression == null)
+            if (!string.IsNullOrEmpty(filtros.OrdenarPor))
             {
-                return entidades;
+                query = query.OrderBy($"{filtros.OrdenarPor} {(filtros.OrdemAsc ? "ascending" : "descending")}");
             }
 
-            var lambda = Expression.Lambda<Func<T, bool>>(expression, parameter);
-            return entidades.Where(lambda);
+            query = query.Skip((filtros.Pagina - 1) * filtros.TamanhoPagina).Take(filtros.TamanhoPagina);
+
+            return query;
         }
 
-        public IQueryable<T> AplicarOrdenacao<T>(IQueryable<T> entidades, string ordenarPor, bool ordemAsc)
+        private static Expression<Func<T, bool>> GenerateNestedFilterExpression<T>(string propertyPath, string value)
         {
-            if (!string.IsNullOrEmpty(ordenarPor))
+            var parameter = Expression.Parameter(typeof(T), "x");
+            var properties = propertyPath.Split('.');
+            Expression expression = parameter;
+
+            for (int i = 0; i < properties.Length; i++)
             {
-                var propertyNames = ordenarPor.Split('.');
-                var parameter = Expression.Parameter(typeof(T), "e");
-                Expression propertyAccess = parameter;
+                var property = properties[i];
+                var propertyInfo = GetPropertyInfo(expression.Type, property);
 
-                foreach (var propertyName in propertyNames)
+                if (propertyInfo == null)
                 {
-                    var property = propertyAccess.Type.GetProperty(propertyName);
-                    if (property == null)
-                        return entidades;
-
-                    propertyAccess = Expression.MakeMemberAccess(propertyAccess, property);
+                    throw new ArgumentException($"'{property}' is not a member of type '{expression.Type}'");
                 }
 
-                var orderByExp = Expression.Lambda(propertyAccess, parameter);
+                if (i < properties.Length - 1 && typeof(System.Collections.IEnumerable).IsAssignableFrom(propertyInfo.PropertyType) && propertyInfo.PropertyType != typeof(string))
+                {
+                    // Propriedade é uma coleção
+                    var elementType = propertyInfo.PropertyType.GetGenericArguments().FirstOrDefault() ?? propertyInfo.PropertyType.GetElementType();
+                    var anyMethod = typeof(Enumerable).GetMethods()
+                        .First(m => m.Name == "Any" && m.GetParameters().Length == 2)
+                        .MakeGenericMethod(elementType);
 
-                var orderByMethod = ordemAsc
-                    ? "OrderBy"
-                    : "OrderByDescending";
+                    var lambdaParameter = Expression.Parameter(elementType, "y");
+                    var subProperty = properties[i + 1];
+                    var subPropertyInfo = GetPropertyInfo(elementType, subProperty);
 
-                var resultExp = Expression.Call(typeof(Queryable), orderByMethod, new Type[] { typeof(T), propertyAccess.Type },
-                                                entidades.Expression, Expression.Quote(orderByExp));
+                    if (subPropertyInfo == null)
+                    {
+                        throw new ArgumentException($"'{subProperty}' is not a member of type '{elementType}'");
+                    }
 
-                return entidades.Provider.CreateQuery<T>(resultExp);
+                    var subContainsExpression = GenerateContainsExpression(subPropertyInfo, lambdaParameter, properties.Skip(i + 1).ToArray(), value);
+                    var lambda = Expression.Lambda(subContainsExpression, lambdaParameter);
+
+                    expression = Expression.Call(anyMethod, Expression.Property(expression, propertyInfo), lambda);
+                    break;
+                }
+                else
+                {
+                    // Propriedade simples
+                    expression = Expression.Property(expression, propertyInfo);
+                }
             }
-            return entidades;
+
+            if (expression.Type != typeof(string))
+            {
+                throw new InvalidOperationException("The final property in the path must be a string to apply 'Contains'.");
+            }
+
+            var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
+            var constant = Expression.Constant(value, typeof(string));
+            var containsExpression = Expression.Call(expression, containsMethod, constant);
+
+            return Expression.Lambda<Func<T, bool>>(containsExpression, parameter);
         }
 
-        public IQueryable<T> AplicarPaginacao<T>(IQueryable<T> entidades, int pagina, int tamanhoPagina)
+        private static Expression GenerateContainsExpression(PropertyInfo propertyInfo, ParameterExpression parameter, string[] subPropertyPath, string value)
         {
-            return entidades.Skip((pagina - 1) * tamanhoPagina).Take(tamanhoPagina);
+            Expression expression = Expression.Property(parameter, propertyInfo);
+
+            for (int i = 1; i < subPropertyPath.Length; i++)
+            {
+                var property = subPropertyPath[i];
+                propertyInfo = GetPropertyInfo(expression.Type, property);
+
+                if (propertyInfo == null)
+                {
+                    throw new ArgumentException($"'{property}' is not a member of type '{expression.Type}'");
+                }
+
+                expression = Expression.Property(expression, propertyInfo);
+            }
+
+            if (expression.Type != typeof(string))
+            {
+                throw new InvalidOperationException("The final property in the path must be a string to apply 'Contains'.");
+            }
+
+            var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
+            var constant = Expression.Constant(value, typeof(string));
+            return Expression.Call(expression, containsMethod, constant);
         }
 
-        public IQueryable<T> AplicarTodosOsFiltros<T>(IQueryable<T> entidades, Filtro filtro)
+        private static PropertyInfo GetPropertyInfo(Type type, string propertyName)
         {
-            entidades = AplicarFiltroPorCampo(entidades, filtro.Filtrar);
-            entidades = AplicarOrdenacao(entidades, filtro.OrdenarPor, filtro.OrdemAsc);
-            return AplicarPaginacao(entidades, filtro.Pagina, filtro.TamanhoPagina);
+            return type.GetProperty(propertyName, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
         }
     }
 }
