@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Proprietarios;
 using SistemaManutencao.Application.UseCases.Proprietarios;
+using SistemaManutencao.Domain.Entities;
 
 namespace SistemaManutencao.API.Controllers
 {
@@ -29,9 +30,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] Filtro filtros)
         {
-            var proprietariosDTO = await _getAllProprietarios.ExecuteAsync();
+            var proprietariosDTO = await _getAllProprietarios.ExecuteAsync(filtros);
 
             HttpContext.Items["MensagemAPI"] = "Proprietários retornados com sucesso";
 

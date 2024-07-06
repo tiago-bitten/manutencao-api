@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Modelo;
 using SistemaManutencao.Application.UseCases.Modelos;
+using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Infra.Data.Constants;
 
 namespace SistemaManutencao.API.Controllers
@@ -51,9 +52,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
+        public async Task<IActionResult> GetAll([FromQuery] Filtro filtros, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var modelosDTO = await _getAllModelos.ExecuteAsync(nome, authHeader);
+            var modelosDTO = await _getAllModelos.ExecuteAsync(filtros, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Modelos retornados com sucesso";
 

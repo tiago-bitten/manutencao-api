@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Localizacoes;
 using SistemaManutencao.Application.UseCases.Localizacoes;
+using SistemaManutencao.Domain.Entities;
 
 namespace SistemaManutencao.API.Controllers
 {
@@ -47,9 +48,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
+        public async Task<IActionResult> GetAll([FromQuery] Filtro filtros, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var localizacoes = await _getAllLocalizacoes.ExecuteAsync(nome, authHeader);
+            var localizacoes = await _getAllLocalizacoes.ExecuteAsync(filtros, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Localizações retornadas com sucesso";
 

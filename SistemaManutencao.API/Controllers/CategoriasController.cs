@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Categoria;
 using SistemaManutencao.Application.UseCases.Categorias;
+using SistemaManutencao.Domain.Entities;
 using SistemaManutencao.Infra.Data.Constants;
 
 namespace SistemaManutencao.API.Controllers
@@ -47,9 +48,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
+        public async Task<IActionResult> GetAll([FromQuery] Filtro filtros, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var categoriasDTO = await _getAllCategorias.ExecuteAsync(nome, authHeader);
+            var categoriasDTO = await _getAllCategorias.ExecuteAsync(filtros, authHeader);
 
             HttpContext.Items["MensagemAPI"] = "Categorias retornadas com sucesso";
 

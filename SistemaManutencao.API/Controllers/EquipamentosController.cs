@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaManutencao.Application.DTOs.Entities.Equipamento;
 using SistemaManutencao.Application.UseCases.Equipamentos;
+using SistemaManutencao.Domain.Entities;
 
 namespace SistemaManutencao.API.Controllers
 {
@@ -44,9 +45,9 @@ namespace SistemaManutencao.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] string? nome, [FromHeader(Name = "Authorization")] string authHeader)
+        public async Task<IActionResult> GetAll([FromQuery] Filtro filtros, [FromHeader(Name = "Authorization")] string authHeader)
         {
-            var equipamentosDTO = await _getAllEquipamentos.ExecuteAsync(nome, authHeader);
+            var equipamentosDTO = await _getAllEquipamentos.ExecuteAsync(filtros, authHeader);
             HttpContext.Items["MensagemAPI"] = "Equipamentos retornados com sucesso";
             return Ok(equipamentosDTO);
         }
